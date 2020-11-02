@@ -8,10 +8,10 @@ function Dispimg() {
                <img className="disp__images__image" src="images/flood.jpg" alt=""/>
             </li>
             <li>
-            <img className="disp__images__image" src="images/flood.jpg" alt=""/>
+            <img className="disp__images__image" src="images/students.png" alt=""/>
             </li>
             <li>
-            <img className="disp__images__image"src="images/flood.jpg" alt=""/>
+            <img className="disp__images__image"src="images/camp.png" alt=""/>
             </li>
             </ul>
         </div>

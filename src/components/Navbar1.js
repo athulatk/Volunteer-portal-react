@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import './Nav.css'
-import {Modal,Button, ModalTitle} from 'react-bootstrap'
+import {Modal,ModalTitle} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 function Navbar1() {
 
