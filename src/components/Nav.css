@@ -1,0 +1,81 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+
+}
+
+.nav__buttons{
+    list-style:none;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    width: 25%;
+    margin-top: 2%;
+    margin-right: 2%;
+
+
+}
+.nav__btn{
+   background-color:#F58216;
+   padding: 10px 30px;
+   color: white;
+   border: none;
+   border-radius: 10px;
+   
+    
+}
+.nav2{
+    background-color:#981041;
+    min-height: 6vh;
+    border-top: 8px solid #F58216;
+
+}
+.drop{
+    margin-right:5%;
+    color: white;
+    text-transform: uppercase;
+}
+
+.form__input{
+    width: 100%;
+}
+
+.form__btn{
+    
+    background-color:#981041;
+    padding: 10px 30px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+}
+
+
+.form_lab{
+    color: rgb(184, 98, 141);
+}
+.header__logo{
+    width: 300px;
+    height: 100px;
+    margin-left:30%;
+}
+
+.disp__images{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding-top: 2%;
+}
+.dispimg{
+    background-color: #981041;
+    min-height: 40vh;
+    
+}
+.disp__images__image{
+    width:450px;
+    height:280px;
+    border-radius: 20px;
+}
