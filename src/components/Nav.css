@@ -23,6 +23,8 @@
    color: white;
    border: none;
    border-radius: 10px;
+   outline: none !important;
+   box-shadow: none !important;
    
     
 }
@@ -40,6 +42,10 @@
 
 .form__input{
     width: 100%;
+    border-radius: 5px;
+    border: 0.5px solid #981041;
+    outline: none;
+    min-height: 2em;
 }
 
 .form__btn{
@@ -49,6 +55,8 @@
     color: white;
     border: none;
     border-radius: 10px;
+    outline: none !important;
+   box-shadow: none !important;
 
 }
 
@@ -67,11 +75,11 @@
     align-items: center;
     justify-content: space-around;
     list-style: none;
-    padding-top: 2%;
+    padding-top: 1%;
 }
 .dispimg{
     background-color: #981041;
-    min-height: 40vh;
+    min-height: 35vh;
     
 }
 .disp__images__image{
@@ -85,4 +93,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding-top: 1%;
+    margin-top: 2%;
+
 }

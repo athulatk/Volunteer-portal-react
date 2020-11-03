@@ -12,8 +12,8 @@ function Signup() {
             <p className="form2__lab">Name </p>
             <input className="form2__input" type="text" name="name" />
             <p className="form2__lab">Choose role:</p>
-            <input type="radio"/> <label className="radio_1">Student/Volunteer</label><br/>
-            <input type="radio"/> <label className="radio_1">Organization</label><br/>
+            <input type="radio" name="designation" value="student"/> <label className="radio_1">Student/Volunteer</label><br/>
+            <input type="radio" name="designation" value="organization"/> <label className="radio_1">Organization</label><br/>
             <p className="form2__lab">Email </p>
             <input className="form2__input" type="email" name="email" />
             <p className="form2__lab">Password </p>

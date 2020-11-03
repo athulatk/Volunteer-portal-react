@@ -1,6 +1,7 @@
 .sign_up{
     margin-top: 2%;
     text-align: center;
+    color: #981041;
 }
 .signup__form{
     text-align: left;
@@ -9,10 +10,14 @@
 }
 .form2__input{
     width: 55%;
+    border-radius: 5px;
+    border: 0.5px solid #981041;
+    outline: none;
+    min-height: 2em;
 }
 
-.form__lab{
-    margin-top: 10%;
+.form2__lab{
+    margin-top:1%;
 }
 
 .btn{

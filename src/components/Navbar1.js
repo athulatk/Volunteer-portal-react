@@ -15,8 +15,8 @@ function Navbar1() {
             <img className="header__logo" src="images/brand.png" alt=""/>
             </div>
                 <ul className="nav__buttons">
-                    <li><Link to="/signup"><button className="nav__btn">Sign up</button></Link></li>
-                    <li><button onClick={handleShow} className="nav__btn">Sign in</button></li>
+                    <li><Link to="/signup"><button className="nav__btn">Sign Up</button></Link></li>
+                    <li><button onClick={handleShow} className="nav__btn">Log In</button></li>
                 </ul>
 
         </nav>
@@ -26,14 +26,14 @@ function Navbar1() {
         </Modal.Header>
         <Modal.Body>
         <form className="login__form">
-        <p className="form_lab">Email:</p>
+        <p className="form_lab">Email</p>
         <input className="form__input" type="text" email="email" />
         <hr/>
-        <p className="form_lab">Password:</p>
+        <p className="form_lab">Password</p>
         <input className="form__input" type="password"/>
         <hr/>
         <div className="btn1">
-        <button className="form__btn" type="submit">Log in</button>
+        <button className="form__btn" type="submit">Go!</button>
         </div>
         </form>
         </Modal.Body>
