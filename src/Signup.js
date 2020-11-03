@@ -9,12 +9,21 @@ function Signup() {
             <Navbar2/>
             <h2 className="sign_up">Sign up</h2>
             <form className="signup__form">
-            <p className="form2_lab">Email:</p>
-            <input className="form2__input" type="text" email="email" />
-            <p className="form2_lab">Password:</p>
+            <p className="form2__lab">Name </p>
+            <input className="form2__input" type="text" name="name" />
+            <p className="form2__lab">Choose role:</p>
+            <input type="radio"/> <label className="radio_1">Student/Volunteer</label><br/>
+            <input type="radio"/> <label className="radio_1">Organization</label><br/>
+            <p className="form2__lab">Email </p>
+            <input className="form2__input" type="email" name="email" />
+            <p className="form2__lab">Password </p>
             <input className="form2__input" type="password"/>
-            <hr/>
-            <button className="form__btn" type="submit">Sign Up</button>
+            <p className="form2__lab">Confirm Password </p>
+            <input className="form2__input" type="password"/>
+            <br/><br/>
+            <div className="btn">
+            <button className="form__btn" type="submit">Submit</button>
+            </div>
             </form>
             </div>
     )

@@ -79,3 +79,10 @@
     height:280px;
     border-radius: 20px;
 }
+
+.btn1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

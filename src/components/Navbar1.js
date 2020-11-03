@@ -32,10 +32,12 @@ function Navbar1() {
         <p className="form_lab">Password:</p>
         <input className="form__input" type="password"/>
         <hr/>
+        <div className="btn1">
         <button className="form__btn" type="submit">Log in</button>
+        </div>
         </form>
         </Modal.Body>
-      </Modal>
+        </Modal>
         </>
     )
 }
