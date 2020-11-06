@@ -4,7 +4,7 @@ import {Modal,ModalTitle} from 'react-bootstrap'
 function Login({see,setSee,handleClose,handleShow}) {
 
     const[userName,setUserName]=useState("");
-    const[Password,setPassword]=useState(""); 
+    const[password,setPassword]=useState(""); 
 
 
     return (
