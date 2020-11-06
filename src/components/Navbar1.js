@@ -13,7 +13,7 @@ function Navbar1(){
         <>
         <nav className="nav">
             <div className="head">
-            <img className="header__logo" src="images/brand.png" alt=""/>
+            <Link to="/"><img className="header__logo" src="images/brand.png" alt=""/></Link>
             </div>
                 <ul className="nav__buttons">
                     <li><Link to="/signup"><button className="nav__btn">Sign Up</button></Link></li>
