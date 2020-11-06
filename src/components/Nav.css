@@ -104,3 +104,17 @@
     margin-top: 2%;
 
 }
+.user{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width:20%;
+    
+    
+}
+.navicon{
+    display: flex;
+    flex-direction: column;
+    
+
+}
