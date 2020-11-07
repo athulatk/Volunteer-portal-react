@@ -1,0 +1,15 @@
+<Container style={{backgroundColor:"aqua"}}>
+        
+            <Row>
+            <Col> <div style={{backgroundColor:"orange",blockSize:"5rem"}}>Disaster Management</div> </Col>
+            <Col> <div style={{backgroundColor:"orange"}}>Food Supply</div> </Col>
+            <Col> <div style={{backgroundColor:"orange"}}>Technical Support</div> </Col>
+            </Row>
+
+            <Row>
+            <Col> <div style={{backgroundColor:"orange",blockSize:"5rem"}}>Hai</div> </Col>
+            <Col> <div style={{backgroundColor:"orange"}}>Hai</div> </Col>
+            <Col> <div style={{backgroundColor:"orange"}}>Hai</div> </Col>
+            </Row>
+ 
+            </Container>
