@@ -11,10 +11,10 @@ function Categories() {
         <Col className="grid__element">
         
         <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
-        <Link to="/signup">
+        <Link to="/signup" style={{textDecoration:"none"}}>
         <Card.Img height="200px" variant="top" src="/images/dis.jpg" />
         <Card.Body>
-        <Card.Title style={{textDecoration:"none",color:"white"}}>Disaster Management Support</Card.Title>
+        <Card.Title style={{color:"white",textAlign:"center"}}>Disaster Management Support</Card.Title>
         </Card.Body>
         </Link>
         </Card>
@@ -22,20 +22,20 @@ function Categories() {
         </Col>
         <Col>
 
-        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%"}}>
+        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
         <Card.Img height="200px" variant="top" src="/images/ts.jpg" />
         <Card.Body>
-        <Card.Title>Technical Support</Card.Title>
+        <Card.Title style={{color:"white",textAlign:"center"}}>Technical Support</Card.Title>
         </Card.Body>
         </Card>
         
         </Col>
         <Col className="grid__element">
 
-        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%"}}>
+        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
         <Card.Img height="200px" variant="top" src="/images/tut.jpg" />
         <Card.Body>
-        <Card.Title>Food Supply</Card.Title>
+        <Card.Title style={{color:"white",textAlign:"center"}}>Food Supply</Card.Title>
         </Card.Body>
         </Card>
 
@@ -45,30 +45,30 @@ function Categories() {
         <Row className="row">
         <Col className="grid__element">
 
-        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%"}}>
+        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
         <Card.Img height="200px" variant="top" src="/images/blood.jpg" />
         <Card.Body>
-        <Card.Title>Blood Donation</Card.Title>
+        <Card.Title style={{color:"white",textAlign:"center"}}>Blood Donation</Card.Title>
         </Card.Body>
         </Card>
 
         </Col>
         <Col className="grid__element">
 
-        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%"}}>
+        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
         <Card.Img height="200px" variant="top" src="/images/tut.jpg" />
         <Card.Body>
-        <Card.Title>Tutoring</Card.Title>
+        <Card.Title style={{color:"white",textAlign:"center"}}>Tutoring</Card.Title>
         </Card.Body>
         </Card>
 
         </Col>
         <Col className="grid__element">
 
-        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%"}}>
+        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
         <Card.Img height="200px" variant="top" src="/images/pain.jpg" />
         <Card.Body>
-        <Card.Title>Pain and Palliative</Card.Title>
+        <Card.Title style={{color:"white",textAlign:"center"}}>Pain and Palliative</Card.Title>
         </Card.Body>
         </Card>
 

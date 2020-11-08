@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import {useHistory} from 'react-router-dom'
 import Navbar1 from './components/Navbar1'
 import Navbar2 from './components/Navbar2'
 import './Signup.css'
@@ -10,6 +11,7 @@ function Signup() {
     const[pass1,setPass1]=useState("");
     const[pass2,setPass2]=useState("");
     const[password,setPassword]=useState("");
+    let history=useHistory();
 
 
     function confirmPassword(){
@@ -25,6 +27,8 @@ function Signup() {
     function onSubmit(e){
         e.preventDefault();
         confirmPassword();
+        history.push("/home")
+
         
     }
 
