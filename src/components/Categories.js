@@ -33,7 +33,7 @@ function Categories() {
         <Col className="grid__element">
 
         <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
-        <Card.Img height="200px" variant="top" src="/images/tut.jpg" />
+        <Card.Img height="200px" variant="top" src="/images/food.webp" />
         <Card.Body>
         <Card.Title style={{color:"white",textAlign:"center"}}>Food Supply</Card.Title>
         </Card.Body>
