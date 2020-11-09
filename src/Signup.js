@@ -28,7 +28,7 @@ function Signup() {
     function onSubmit(e){
         e.preventDefault();
         //confirmPassword();
-        /*Axios.post("https://localhost:3001/auth/Signup",{
+        /*Axios.post("https://localhost:3001/Signup",{
           name:name,
           email:email,
           designation:role,
