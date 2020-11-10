@@ -2,6 +2,7 @@ import React from 'react'
 import './Nav.css'
 import HomeIcon from '@material-ui/icons/Home';
 import {Link} from 'react-router-dom'
+import {Dropdown} from 'react-bootstrap'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 function Navbar3() {
     return (
@@ -19,11 +20,19 @@ function Navbar3() {
                     Home
                     </div>
                     </Link>
-                    <div className="navicon">
+                    <div className="navicon dropdown">
                     <AccountCircleIcon style={{fontSize:40}}/>
+                    <br/>
                     Athul
+                    <a href="" class="dropbtn"></a>
+                    <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <Link to ="/" style={{textDecoration:"none"}}>Sign Out</Link>
                     </div>
-                
+                    </div>
+                    {/*<li class="dropdown">*/}
+                    
+                {/*</li>*/}
                 </div>
 
         </nav>

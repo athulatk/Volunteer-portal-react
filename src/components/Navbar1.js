@@ -4,9 +4,7 @@ import {Link} from 'react-router-dom'
 import Login from '../Login'
 function Navbar1(){
 
-    const [see,setSee]=useState(false);
-    const handleClose = () => setSee(false);
-    const handleShow = () => setSee(true);
+    const [modalShow,setModalShow]=useState(false);
 
 
     return (
@@ -17,13 +15,13 @@ function Navbar1(){
             </div>
                 <ul className="nav__buttons">
                     <li><Link to="/signup"><button className="nav__btn">Sign Up</button></Link></li>
-                    <li><button onClick={handleShow} className="nav__btn">Log In</button></li>
+                    <li><button onClick={()=>setModalShow(true)} className="nav__btn">Log In</button></li>
                 </ul>
 
         </nav>
 
 
-        <Login see={see} handleClose={handleClose} handleShow={handleShow} setSee={setSee}/>
+        <Login show={modalShow} onHide={()=>setModalShow(false)}/>
 
         </>
     )

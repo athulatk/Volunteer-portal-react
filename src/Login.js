@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import {useHistory} from 'react-router-dom'
 import {Modal,ModalTitle} from 'react-bootstrap'
 
-function Login({see,setSee,handleClose,handleShow}) {
+function Login(props) {
 
     const[userName,setUserName]=useState("");
     const[password,setPassword]=useState(""); 
@@ -10,10 +10,10 @@ function Login({see,setSee,handleClose,handleShow}) {
     const Loginaction = (e) =>{
         history.push("/home")
     }
-    
 
     return (
-        <Modal show={see} onHide={handleClose} aria-labelledby="contained-modal-title-vcenter" centered>
+       
+        <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
         <Modal.Header closeButton>
         <ModalTitle className="form_lab">Log In</ModalTitle>
         </Modal.Header>

@@ -2,16 +2,15 @@ import React,{useState} from 'react'
 import {useHistory} from 'react-router-dom'
 import Navbar1 from './components/Navbar1'
 import Navbar2 from './components/Navbar2'
-import Axios from 'axios'
+import axios from 'axios'
 import './Signup.css'
 function Signup() {
 
     const[name,setName]=useState("");
-    const[role,setRole]=useState("");
+    const[designation,setDesignation]=useState("");
     const[email,setEmail]=useState("");
-    const[pass1,setPass1]=useState("");
-    const[pass2,setPass2]=useState("");
     const[password,setPassword]=useState("");
+    const[confirm,setConfirm]=useState("");
     let history=useHistory();
 
 
@@ -28,18 +27,18 @@ function Signup() {
     function onSubmit(e){
         e.preventDefault();
         //confirmPassword();
-        /*Axios.post("https://localhost:3001/Signup",{
+        axios.post("https://localhost:3001/auth/Signup",{
           name:name,
           email:email,
-          designation:role,
-          password:pass1,
-          confirm:pass2,
+          designation:designation,
+          password:password,
+          confirm:confirm
         }).then((res) => {
             console.log(res)
-        }).catch(error=>{
+        }).catch(error =>{
             console.log(error)
-        })*/
-        history.push("/home")
+        })
+        //history.push("/home")
 
         
     }
@@ -53,14 +52,14 @@ function Signup() {
             <p className="form2__lab">Name </p>
             <input onChange={(e)=>{setName(e.target.value)}} className="form2__input" type="text" name="name" value={name}/>
             <p className="form2__lab">Choose role:</p>
-            <input onChange={(e)=>{setRole(e.target.value)}} type="radio" name="designation" value="student"/> <label className="radio_1">Student/Volunteer</label><br/>
-            <input onChange={(e)=>{setRole(e.target.value)}} type="radio" name="designation" value="organization"/> <label className="radio_1">Organization</label><br/>
+            <input onChange={(e)=>{setDesignation(e.target.value)}} type="radio" name="designation" value="student"/> <label className="radio_1">Student/Volunteer</label><br/>
+            <input onChange={(e)=>{setDesignation(e.target.value)}} type="radio" name="designation" value="organization"/> <label className="radio_1">Organization</label><br/>
             <p className="form2__lab">Email </p>
             <input onChange={(e)=>{setEmail(e.target.value)}} className="form2__input" type="email" name="email" value={email}/>
             <p className="form2__lab">Password </p>
-            <input onChange={(e)=>{setPass1(e.target.value)}} className="form2__input" type="password" value={pass1}/>
+            <input onChange={(e)=>{setPassword(e.target.value)}} className="form2__input" type="password" value={password}/>
             <p className="form2__lab">Confirm Password </p>
-            <input onChange={(e)=>{setPass2(e.target.value)}} className="form2__input" type="password" value={pass2}/>
+            <input onChange={(e)=>{setConfirm(e.target.value)}} className="form2__input" type="password" value={confirm}/>
             <br/><br/>
             <div className="btn">
             <button onClick={onSubmit} className="form__btn" type="submit">Submit</button>
