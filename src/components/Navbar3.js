@@ -22,7 +22,7 @@ function Navbar3() {
                     <div className="navicon dropdown dropbtn">
                     <AccountCircleIcon style={{fontSize:40}}/>
                     <br/>
-                    Athul
+                    athulnvinod@gmail.com
                     {/*<a href="#" className="dropbtn"></a>*/}
                     <div className="dropdown-content">
                     <Link to="/" style={{textDecoration:"none"}}>Profile</Link>

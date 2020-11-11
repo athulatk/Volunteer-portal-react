@@ -11,8 +11,10 @@ function Signup() {
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState("");
     const[confirm,setConfirm]=useState("");
+    const[status,setStatus]=useState("");
     let history=useHistory();
-    axios.defaults.baseURL="https://localhost:3001"
+    axios.defaults.baseURL="http://localhost:3001"
+
 
     function onSubmit(e){
         e.preventDefault();
@@ -23,11 +25,17 @@ function Signup() {
           password:password,
           confirm:confirm
         }).then((res) => {
-            console.log(res)
+            if(res.data.message){
+                setStatus(res.data.message);
+            }
+            else{
+                console.log(res);
+                setStatus("Registration Successful!!")
+            }
+            
         }).catch(error =>{
             console.log(error)
         })
-        //history.push("/home")
 
         
     }
@@ -37,23 +45,25 @@ function Signup() {
             <Navbar1/>
             <Navbar2/>
             <h2 className="sign_up">Sign up</h2>
-            <form className="signup__form">
+            <form className="signup__form" onSubmit={onSubmit}>
             <p className="form2__lab">Name </p>
-            <input onChange={(e)=>{setName(e.target.value)}} className="form2__input" type="text" name="name" value={name}/>
+            <input onChange={(e)=>{setName(e.target.value)}} className="form2__input" type="text" name="name" value={name} required/>
             <p className="form2__lab">Choose role:</p>
-            <input onChange={(e)=>{setDesignation(e.target.value)}} type="radio" name="designation" value="student"/> <label className="radio_1">Student/Volunteer</label><br/>
+            <input onChange={(e)=>{setDesignation(e.target.value)}} type="radio" name="designation" value="student" required/> <label className="radio_1">Student/Volunteer</label><br/>
             <input onChange={(e)=>{setDesignation(e.target.value)}} type="radio" name="designation" value="organization"/> <label className="radio_1">Organization</label><br/>
             <p className="form2__lab">Email </p>
-            <input onChange={(e)=>{setEmail(e.target.value)}} className="form2__input" type="email" name="email" value={email}/>
+            <input onChange={(e)=>{setEmail(e.target.value)}} className="form2__input" type="email" name="email" value={email} required/>
             <p className="form2__lab">Password </p>
-            <input onChange={(e)=>{setPassword(e.target.value)}} className="form2__input" type="password" value={password}/>
+            <input onChange={(e)=>{setPassword(e.target.value)}} className="form2__input" type="password" value={password} required/>
             <p className="form2__lab">Confirm Password </p>
-            <input onChange={(e)=>{setConfirm(e.target.value)}} className="form2__input" type="password" value={confirm}/>
+            <input onChange={(e)=>{setConfirm(e.target.value)}} className="form2__input" type="password" value={confirm} required/>
             <br/><br/>
             <div className="btn">
-            <button onClick={onSubmit} className="form__btn" type="submit">Submit</button>
+            <button className="form__btn" type="submit">Submit</button>
             </div>
             </form>
+            <br/>
+            <h5 style={{textAlign:"center",color:"red"}}>{status}</h5>
             </div>
     )
 }
