@@ -4,7 +4,7 @@ import {Modal,ModalTitle} from 'react-bootstrap'
 
 function Login(props) {
 
-    const[userName,setUserName]=useState("");
+    const[email,setEmail]=useState("");
     const[password,setPassword]=useState(""); 
     let history=useHistory();
     const Loginaction = (e) =>{
@@ -20,10 +20,10 @@ function Login(props) {
         <Modal.Body>
         <form className="login__form">
         <p className="form_lab">Email</p>
-        <input onChange={(e)=>{setUserName(e.target.value)}}className="form__input" type="text" email="email" />
+        <input onChange={(e)=>{setEmail(e.target.value)}}className="form__input" type="text" email="email" value={email}/>
         <hr/>
         <p className="form_lab">Password</p>
-        <input onChange={(e)=>{setPassword(e.target.value)}}className="form__input" type="password"/>
+        <input onChange={(e)=>{setPassword(e.target.value)}}className="form__input" type="password" value={password}/>
         <hr/>
         <div className="btn1">
         <button className="form__btn" type="submit" onClick={Loginaction}>Go!</button>

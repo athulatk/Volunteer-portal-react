@@ -12,22 +12,11 @@ function Signup() {
     const[password,setPassword]=useState("");
     const[confirm,setConfirm]=useState("");
     let history=useHistory();
-
-
-   /* function confirmPassword(){
-        if(pass1===pass2){
-            setPassword(pass1)
-        }
-        else{
-            setPassword("")
-        }
-
-    }*/
+    axios.defaults.baseURL="https://localhost:3001"
 
     function onSubmit(e){
         e.preventDefault();
-        //confirmPassword();
-        axios.post("https://localhost:3001/auth/Signup",{
+        axios.post("auth/Signup",{
           name:name,
           email:email,
           designation:designation,
