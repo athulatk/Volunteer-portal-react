@@ -7,7 +7,7 @@ function Login(props) {
 
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState(""); 
-    const[status,setStatus]=useState("");
+    const[msg,setMsg]=useState("");
     let history=useHistory();
     const Loginaction = (e) =>{
         e.preventDefault();
@@ -16,10 +16,14 @@ function Login(props) {
           password:password,
         }).then((res) => {
             if(res.data.logged){
-                history.push("/home")
+                console.log(res)
+                if(res.data.result[0].DESIGNATION==="organization")
+                    history.push("/homeorg")
+                else
+                    history.push("/home")
             }
             else{
-                setStatus("Incorrect credentials");
+                setMsg("Incorrect credentials");
             }
             
         }).catch(error =>{
@@ -46,7 +50,7 @@ function Login(props) {
         </div>
         </form>
         <br/>
-        <h5 style={{textAlign:"center",color:"red"}}>{status}</h5>
+        <h5 style={{textAlign:"center",color:"red"}}>{msg}</h5>
         </Modal.Body>
         </Modal>
     )

@@ -4,6 +4,7 @@ import Signup from './Signup'
 import Home from './Home'
 import Disaster from './Disaster'
 import Food from './Food'
+import HomeOrg from './Home_org'
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/homeorg">
+            <HomeOrg />
           </Route>
           <Route path="/disaster">
             <Disaster />

@@ -13,12 +13,10 @@ function Signup() {
     const[confirm,setConfirm]=useState("");
     const[status,setStatus]=useState("");
     let history=useHistory();
-    axios.defaults.baseURL="http://localhost:3001"
-
 
     function onSubmit(e){
         e.preventDefault();
-        axios.post("auth/Signup",{
+        axios.post("http://localhost:3001/auth/Signup",{
           name:name,
           email:email,
           designation:designation,
@@ -29,15 +27,14 @@ function Signup() {
                 setStatus(res.data.message);
             }
             else{
-                console.log(res);
+                
                 setStatus("Registration Successful!!")
             }
             
         }).catch(error =>{
             console.log(error)
         })
-
-        
+     
     }
 
     return (
