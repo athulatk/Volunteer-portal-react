@@ -7,8 +7,8 @@ function Home_org() {
         <div>
             <Navbar3/>
             <Navbar2/>
+            <h3 style={{textAlign:"center",color:"#981041",marginTop:"2%"}}>Categories</h3>
             <Categories/>
-            <h1>Organization</h1>
         </div>
     )
 }

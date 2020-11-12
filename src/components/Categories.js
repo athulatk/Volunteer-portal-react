@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom'
 function Categories() {
     return (
         <>
-        <h3 style={{marginTop:"2%",textAlign:"center",color:"#981041"}}>Categories</h3>
         <Container className="grid">
         <Row className="row">
         <Col className="grid__element">

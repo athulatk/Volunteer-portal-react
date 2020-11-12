@@ -20,9 +20,9 @@ function Navbar1(){
 
         </nav>
 
-
+        <>
         <Login show={modalShow} onHide={()=>setModalShow(false)}/>
-
+        </>
         </>
     )
 }

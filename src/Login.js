@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 import {Modal,ModalTitle} from 'react-bootstrap'
+import { render } from '@testing-library/react';
 
 function Login(props) {
 
@@ -16,7 +17,6 @@ function Login(props) {
           password:password,
         }).then((res) => {
             if(res.data.logged){
-                console.log(res)
                 if(res.data.result[0].DESIGNATION==="organization")
                     history.push("/homeorg")
                 else
@@ -32,7 +32,7 @@ function Login(props) {
     }
 
     return (
-       
+       <>
         <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
         <Modal.Header closeButton>
         <ModalTitle className="form_lab">Log In</ModalTitle>
@@ -40,7 +40,7 @@ function Login(props) {
         <Modal.Body>
         <form className="login__form" onSubmit={Loginaction}>
         <p className="form_lab">Email</p>
-        <input onChange={(e)=>{setEmail(e.target.value)}}className="form__input" type="text" email="email" value={email} required/>
+        <input onChange={(e)=>{setEmail(e.target.value)}}className="form__input" type="text" name="email" value={email} required/>
         <hr/>
         <p className="form_lab">Password</p>
         <input onChange={(e)=>{setPassword(e.target.value)}}className="form__input" type="password" value={password} required/>
@@ -53,7 +53,9 @@ function Login(props) {
         <h5 style={{textAlign:"center",color:"red"}}>{msg}</h5>
         </Modal.Body>
         </Modal>
+        </>
     )
 }
+
 
 export default Login

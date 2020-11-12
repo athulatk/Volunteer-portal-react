@@ -7,6 +7,7 @@ function Home() {
         <div>
             <Navbar3/>
             <Navbar2/>
+            <h3 style={{textAlign:"center",color:"#981041",marginTop:"2%"}}>Volunteer Here!</h3>
             <Categories/>
         </div>
     )

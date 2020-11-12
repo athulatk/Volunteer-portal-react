@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {useHistory} from 'react-router-dom'
+import {Modal,Button} from 'react-bootstrap'
 import Navbar1 from './components/Navbar1'
 import Navbar2 from './components/Navbar2'
 import axios from 'axios'
@@ -14,6 +15,20 @@ function Signup() {
     const[status,setStatus]=useState("");
     let history=useHistory();
 
+
+    const [show, setShow] = useState(false);
+  
+    const handleClose = () => {
+        setShow(false);
+        history.push("/")
+    }
+    const handleShow = () => setShow(true);
+
+
+
+
+
+
     function onSubmit(e){
         e.preventDefault();
         axios.post("http://localhost:3001/auth/Signup",{
@@ -27,8 +42,8 @@ function Signup() {
                 setStatus(res.data.message);
             }
             else{
-                
-                setStatus("Registration Successful!!")
+                setStatus("Success")
+                handleShow();
             }
             
         }).catch(error =>{
@@ -38,7 +53,7 @@ function Signup() {
     }
 
     return (
-        <div>
+        <>
             <Navbar1/>
             <Navbar2/>
             <h2 className="sign_up">Sign up</h2>
@@ -61,8 +76,15 @@ function Signup() {
             </form>
             <br/>
             <h5 style={{textAlign:"center",color:"red"}}>{status}</h5>
-            </div>
+            <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+            {/*<Modal.Title>Modal heading</Modal.Title>*/}
+            </Modal.Header>
+            <Modal.Body><img src="/images/tick.png" height="100px" width="100px" style={{marginLeft:"40%"}}/><p style={{textAlign:"center",color:"green"}}>Registration Successful<br/>Login to continue</p></Modal.Body>
+            </Modal>
+            </>
     )
 }
 
 export default Signup
+
