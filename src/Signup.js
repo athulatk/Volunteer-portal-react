@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import {useHistory} from 'react-router-dom'
-import {Modal,Button} from 'react-bootstrap'
+import {Modal} from 'react-bootstrap'
 import Navbar1 from './components/Navbar1'
 import Navbar2 from './components/Navbar2'
 import axios from 'axios'
@@ -80,7 +80,7 @@ function Signup() {
             <Modal.Header closeButton>
             {/*<Modal.Title>Modal heading</Modal.Title>*/}
             </Modal.Header>
-            <Modal.Body><img src="/images/tick.png" height="100px" width="100px" style={{marginLeft:"40%"}}/><p style={{textAlign:"center",color:"green"}}>Registration Successful<br/>Login to continue</p></Modal.Body>
+            <Modal.Body><img src="/images/tick.png" alt="check" height="100px" width="100px" style={{marginLeft:"40%"}}/><p style={{textAlign:"center",color:"green"}}>Registration Successful<br/>Login to continue</p></Modal.Body>
             </Modal>
             </>
     )

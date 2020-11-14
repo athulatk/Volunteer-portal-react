@@ -1,15 +1,17 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 import {Modal,ModalTitle} from 'react-bootstrap'
-import { render } from '@testing-library/react';
+import {LoginContext} from './LoginContext'
 
 function Login(props) {
 
+    const[loginstatus,setLoginstatus]=useContext(LoginContext)
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState(""); 
     const[msg,setMsg]=useState("");
     let history=useHistory();
+
     const Loginaction = (e) =>{
         e.preventDefault();
         axios.post("http://localhost:3001/auth/Login",{
@@ -17,6 +19,7 @@ function Login(props) {
           password:password,
         }).then((res) => {
             if(res.data.logged){
+                setLoginstatus({userEmail:email,logged:true})
                 if(res.data.result[0].DESIGNATION==="organization")
                     history.push("/homeorg")
                 else

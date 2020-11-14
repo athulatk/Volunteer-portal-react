@@ -1,9 +1,11 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import './Nav.css'
 import HomeIcon from '@material-ui/icons/Home';
 import {Link} from 'react-router-dom'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import {LoginContext} from '../LoginContext'
 function Navbar3() {
+    const[loginstatus,setLoginstatus]=useContext(LoginContext)
     return (
         <div>
             <nav className="nav">
@@ -22,10 +24,10 @@ function Navbar3() {
                     <div className="navicon dropdown dropbtn">
                     <AccountCircleIcon style={{fontSize:40}}/>
                     <br/>
-                    User
+                    {loginstatus.userEmail}
                     {/*<a href="#" className="dropbtn"></a>*/}
                     <div className="dropdown-content">
-                    <Link to="/" style={{textDecoration:"none"}}>Profile</Link>
+                    <Link to="" style={{textDecoration:"none"}}>Profile</Link>
                     <Link to ="/" style={{textDecoration:"none"}}>Sign Out</Link>
                     </div>
                     </div>

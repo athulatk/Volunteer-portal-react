@@ -6,6 +6,7 @@ import Disaster from './Disaster'
 import Food from './Food'
 import HomeOrg from './Home_org'
 import './App.css';
+import {LoginProvider} from './LoginContext'
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,6 +14,7 @@ import {
 } from "react-router-dom";
 function App() {
   return (
+    <LoginProvider>
     <div className="App">
       <Router>
       <Switch>
@@ -37,6 +39,7 @@ function App() {
         </Switch>
         </Router>
     </div>
+    </LoginProvider>
   );
 }
 

@@ -1,8 +1,15 @@
-import React from 'react'
+import React,{useState,useEffect}from 'react'
 import Navbar3 from './components/Navbar3'
 import Navbar2 from './components/Navbar2'
 import Categories from './components/Categories'
+import {LoginContext} from './LoginContext'
+import { Redirect } from 'react-router-dom'
 function Home() {
+    /*const [loginstatus,setLoginstatus]=useState(LoginContext);
+    useEffect(() => { 
+        if(!loginstatus.logged)
+            <Redirect to="/"/>        
+    }, [])*/
     return (
         <div>
             <Navbar3/>
