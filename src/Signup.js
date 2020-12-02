@@ -78,7 +78,6 @@ function Signup() {
             <h5 style={{textAlign:"center",color:"red"}}>{status}</h5>
             <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-            {/*<Modal.Title>Modal heading</Modal.Title>*/}
             </Modal.Header>
             <Modal.Body><img src="/images/tick.png" alt="check" height="100px" width="100px" style={{marginLeft:"40%"}}/><p style={{textAlign:"center",color:"green"}}>Registration Successful<br/>Login to continue</p></Modal.Body>
             </Modal>

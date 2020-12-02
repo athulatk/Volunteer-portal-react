@@ -5,11 +5,14 @@ import Categories from './components/Categories'
 import {LoginContext} from './LoginContext'
 import { Redirect } from 'react-router-dom'
 function Home() {
-    /*const [loginstatus,setLoginstatus]=useState(LoginContext);
-    useEffect(() => { 
-        if(!loginstatus.logged)
-            <Redirect to="/"/>        
-    }, [])*/
+    const [loginstatus,setLoginstatus]=useState(LoginContext);
+    useEffect(() => {
+        if(!loginstatus.logged){
+            return <Redirect to="/"/>   
+        }
+    }, [])
+    
+             
     return (
         <div>
             <Navbar3/>

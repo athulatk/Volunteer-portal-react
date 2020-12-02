@@ -3,77 +3,66 @@ import {Container,Row,Col} from 'react-bootstrap'
 import {Card} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 function Categories() {
+
+    let category_row1=[
+        {
+            name:"Disaster Management System",
+            image:"/images/dis.jpg"
+        },
+        {
+            name:"Technical Support",
+            image:"/images/ts.jpg"
+        },
+        {
+            name:"Food Supply",
+            image:"/images/food.webp"
+        }]
+    let category_row2=[
+        {
+            name:"Blood Donation",
+            image:"images/blood.jpg"
+        },
+        {
+            name:"Tutoring",
+            image:"/images/tut.jpg"
+        },
+        {
+            name:"Pain and Palliative",
+            image:"/images/pain.jpg"
+        }
+    ]
+
     return (
         <>
         <Container className="grid">
         <Row className="row">
-        <Col className="grid__element">
-        
-        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
-        <Link to="/disaster" style={{textDecoration:"none"}}>
-        <Card.Img height="200px" variant="top" src="/images/dis.jpg" />
-        <Card.Body>
-        <Card.Title style={{color:"white",textAlign:"center"}}>Disaster Management Support</Card.Title>
-        </Card.Body>
-        </Link>
-        </Card>
-
-        </Col>
-        <Col>
-
-        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
-        <Card.Img height="200px" variant="top" src="/images/ts.jpg" />
-        <Card.Body>
-        <Card.Title style={{color:"white",textAlign:"center"}}>Technical Support</Card.Title>
-        </Card.Body>
-        </Card>
-        
-        </Col>
-        <Col className="grid__element">
-
-        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
-        <Link to="/food" style={{textDecoration:"none"}}>
-        <Card.Img height="200px" variant="top" src="/images/food.webp" />
-        <Card.Body>
-        <Card.Title style={{color:"white",textAlign:"center"}}>Food Supply</Card.Title>
-        </Card.Body>
-        </Link>
-        </Card>
-
-        </Col>
+        {category_row1.map(category => (
+            <Col className="grid__element">
+            <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216",borderRadius:"30px"}}>
+            <Link to="/disaster" style={{textDecoration:"none"}}>
+            <Card.Img style={{borderRadius:"30px 30px 0px 0px"}}height="200px" variant="top" src={category.image} />
+            <Card.Body>
+            <Card.Title style={{color:"white",textAlign:"center"}}>{category.name}</Card.Title>
+            </Card.Body>
+            </Link>
+            </Card>
+            </Col>
+        ))}
         </Row>
 
         <Row className="row">
-        <Col className="grid__element">
-
-        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
-        <Card.Img height="200px" variant="top" src="/images/blood.jpg" />
-        <Card.Body>
-        <Card.Title style={{color:"white",textAlign:"center"}}>Blood Donation</Card.Title>
-        </Card.Body>
-        </Card>
-
-        </Col>
-        <Col className="grid__element">
-
-        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
-        <Card.Img height="200px" variant="top" src="/images/tut.jpg" />
-        <Card.Body>
-        <Card.Title style={{color:"white",textAlign:"center"}}>Tutoring</Card.Title>
-        </Card.Body>
-        </Card>
-
-        </Col>
-        <Col className="grid__element">
-
-        <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216"}}>
-        <Card.Img height="200px" variant="top" src="/images/pain.jpg" />
-        <Card.Body>
-        <Card.Title style={{color:"white",textAlign:"center"}}>Pain and Palliative</Card.Title>
-        </Card.Body>
-        </Card>
-
-        </Col>
+        {category_row2.map(category => (
+            <Col className="grid__element">
+            <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216",borderRadius:"30px"}}>
+            <Link to="/disaster" style={{textDecoration:"none"}}>
+            <Card.Img style={{borderRadius:"30px 30px 0px 0px"}}height="200px" variant="top" src={category.image} />
+            <Card.Body>
+            <Card.Title style={{color:"white",textAlign:"center"}}>{category.name}</Card.Title>
+            </Card.Body>
+            </Link>
+            </Card>
+            </Col>
+        ))}
         </Row>
 
         </Container>
