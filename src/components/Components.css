@@ -1,0 +1,51 @@
+.urgent_board{
+    background-color: #981041;
+    min-height: 100vh;
+}
+.urgent_heading{
+    padding-top: 4%;
+    text-align: center;
+    color: white;
+}
+
+.search__div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+.search__form > *{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.search__input{
+    border-radius: 10px 10px 10px 10px;
+    outline: none;
+    padding:5px;
+    
+}
+
+.search__button{
+    background-color: #F58216;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    padding: 6px 25px;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.enroll{
+    background-color: #F58216;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    padding: 6px 25px;
+    margin-left: 85%;
+}

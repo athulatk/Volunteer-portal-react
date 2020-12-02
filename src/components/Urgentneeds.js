@@ -1,6 +1,6 @@
 import React from 'react'
 import {Card} from 'react-bootstrap'
-import './Urgent.css'
+import './Components.css'
 function Urgentneeds() {
     return (
         <div className="urgent_board">
