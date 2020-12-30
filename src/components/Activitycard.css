@@ -1,7 +1,30 @@
 .activity{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     border:1px solid crimson;
     border-radius: 10px;
+    background-color: #ddcad9;
+    background-image: linear-gradient(315deg, #ddcad9 0%, #d1b1cb 74%);
+    margin:2% 2% 0 2%;
+    padding:2%;
+    color:black;
 }
+.activity__details{
+    padding-left: 2%;
+    margin-top: 10px;
+}
+.claim_btn{   
+        background-color:#981041;
+        padding: 10px 30px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        outline: none !important;
+        box-shadow: none !important;
+}
+.status{
+    margin-top: 1em;
+}
+
+

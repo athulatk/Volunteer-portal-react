@@ -27,7 +27,7 @@ function Navbar3() {
                     {loginstatus.userEmail}
                     {/*<a href="#" className="dropbtn"></a>*/}
                     <div className="dropdown-content">
-                    <Link to="" style={{textDecoration:"none"}}>Profile</Link>
+                    <Link to="/profile" style={{textDecoration:"none"}}>Profile</Link>
                     <Link to ="/" style={{textDecoration:"none"}} onClick={()=>setLoginstatus({userEmail:"",logged:false})}>Sign Out</Link>
                     </div>
                     </div>

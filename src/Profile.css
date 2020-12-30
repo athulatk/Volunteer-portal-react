@@ -19,3 +19,16 @@
     padding-left: 2%;
     margin-top: 10%;
 }
+.update__profile{
+    background-color:#1FAA59;
+    color: white;
+    text-align: right;
+    border: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none !important;
+    box-shadow: none !important;
+    margin-top: 2em;
+
+}

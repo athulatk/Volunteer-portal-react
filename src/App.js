@@ -3,6 +3,7 @@ import Welcome from './Welcome'
 import Signup from './Signup'
 import Home from './Home'
 import Profile from './Profile'
+import Profileupdate from './Profileupdate'
 import Disaster from './Disaster'
 import Food from './Food'
 import HomeOrg from './Home_org'
@@ -23,7 +24,7 @@ function App() {
           <Route path="/signup">
             <Signup />
           </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <Home />
           </Route>
           <Route path="/homeorg">
@@ -32,13 +33,16 @@ function App() {
           <Route path="/disaster">
             <Disaster />
           </Route>
-          <Route path="/profile">
+          <Route exact path="/profile">
             <Profile/>
+          </Route>
+          <Route exact path="/profile/update">
+            <Profileupdate/>
           </Route>
           <Route path="/food">
             <Food />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Welcome/>
           </Route>
         </Switch>

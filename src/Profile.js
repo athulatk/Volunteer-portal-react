@@ -14,10 +14,14 @@ function Profile() {
                 <div className="profile_content profile__name">
                     <h3>Steve Rogers</h3>
                     <h5>steve70@shield.com</h5>
+                    <button className="update__profile">View/Update Profile</button>
                 </div>
             </div>
             <div>
             <h3 className="enrolled">Enrolled Activities</h3>
+            <Activitycard/>
+            <Activitycard/>
+            <Activitycard/>
             <Activitycard/>
             </div> 
             

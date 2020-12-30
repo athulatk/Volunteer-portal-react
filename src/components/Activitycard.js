@@ -7,8 +7,8 @@ function Activitycard() {
                 <p>H20 Volunteer</p>
                 <p>Kannur</p>
             </div>
-            <p>Ongoing</p>
-            <button>
+            <p className="status">Ongoing</p>
+            <button className="claim_btn">
                 Claim Certificate
             </button>
         </div>
