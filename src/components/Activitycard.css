@@ -1,0 +1,7 @@
+.activity{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border:1px solid crimson;
+    border-radius: 10px;
+}

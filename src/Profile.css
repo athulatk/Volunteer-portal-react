@@ -1,0 +1,21 @@
+.profile{
+    min-height: 100vh;
+    width: 50%;
+    margin: auto;
+}
+.profile_head{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: 50px;
+}
+.profile__image{
+    border-radius: 50%;
+}
+.profile__name{
+    padding-left: 5em;
+}
+.enrolled{
+    padding-left: 2%;
+    margin-top: 10%;
+}

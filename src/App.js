@@ -2,6 +2,7 @@ import React from 'react'
 import Welcome from './Welcome'
 import Signup from './Signup'
 import Home from './Home'
+import Profile from './Profile'
 import Disaster from './Disaster'
 import Food from './Food'
 import HomeOrg from './Home_org'
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/disaster">
             <Disaster />
+          </Route>
+          <Route path="/profile">
+            <Profile/>
           </Route>
           <Route path="/food">
             <Food />
