@@ -21,10 +21,13 @@ function App() {
     <div className="App">
       <Router>
       <Switch>
+          <Route exact path="/">
+            <Welcome/>
+          </Route>
           <Route path="/signup">
             <Signup />
           </Route>
-          <Route exact path="/home">
+          <Route path="/home">
             <Home />
           </Route>
           <Route path="/homeorg">
@@ -33,17 +36,14 @@ function App() {
           <Route path="/disaster">
             <Disaster />
           </Route>
-          <Route exact path="/profile">
-            <Profile/>
-          </Route>
-          <Route exact path="/profile/update">
-            <Profileupdate/>
-          </Route>
           <Route path="/food">
             <Food />
           </Route>
-          <Route exact path="/">
-            <Welcome/>
+          <Route path="/profile">
+            <Profile/>
+          </Route>
+          <Route path="/update">
+            <Profileupdate/>
           </Route>
         </Switch>
         </Router>
