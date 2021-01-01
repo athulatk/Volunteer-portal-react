@@ -1,9 +1,11 @@
 import React from 'react'
+import {useState} from 'react';
 import Navbar2 from './components/Navbar2'
 import Navbar3 from './components/Navbar3'
 import {Row,Col,Container} from 'react-bootstrap'
 import './Profileupdate.css'
 function Profileupdate() {
+    const [profile, setProfile] = useState("N Athul Kumar")
     return (
         <div>
             <Navbar3/>
@@ -20,24 +22,24 @@ function Profileupdate() {
                 <Container>
                     <Row>
                         <Col lg={2} ><p className="form2__lab">Name</p></Col>
-                        <Col lg={10}><input className="form2__input" type="text" name="name"/></Col>
+                        <Col lg={10}><input className="update__input" type="text" value={profile} name="name" onChange={(e)=>{setProfile(e.target.value)}}/></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">Email </p></Col>
-                        <Col lg={10}><input className="form2__input" type="email" name="email" value="steve70@gmail.com" readonly/></Col>
+                        <Col lg={10}><input className="update__input" type="email" name="email" value="steve70@gmail.com" disabled/></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">DOB</p></Col>
-                        <Col lg={10}><input className="form2__input" type="date" name="dob"/></Col>
+                        <Col lg={10}><input className="update__input" type="date" value="1999-04-21" name="dob"/></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">Institution</p></Col>
-                        <Col lg={10}><input className="form2__input" type="text" name="institution"/></Col>
+                        <Col lg={10}><input className="update__input" type="text" name="institution"/></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">District</p></Col>
                         <Col lg={10}>
-                        <select className="form2__input" name="district" id="district">
+                        <select className="update__input" name="district" id="district">
                         <option value="Alappuzha">Alappuzha</option>
                         <option value="Ernakulam">Ernakulam</option>
                         <option value="Idukki">Idukki</option>
@@ -57,14 +59,14 @@ function Profileupdate() {
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">Phone Number</p></Col>
-                        <Col lg={10}><input className="form2__input" type="tel" name="phone" pattern="[0-9]{10}"/></Col>
+                        <Col lg={10}><input className="update__input" type="tel" name="phone" pattern="[0-9]{10}"/></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">Profile Picture</p></Col>
-                        <Col lg={10}><input className="form2__input" type="text" placeholder="Image URL" name="pic"/></Col>
+                        <Col lg={10}><input className="update__input" type="text" placeholder="Image URL" name="pic"/></Col>
                     </Row>
                 </Container>
-                <button type="submit" className="save_btn">Save</button>
+                <button type="submit" className="save_btn">Save Changes</button>
                 </form>
                 
                 

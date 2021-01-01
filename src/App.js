@@ -6,6 +6,7 @@ import Profile from './Profile'
 import Profileupdate from './Profileupdate'
 import Disaster from './Disaster'
 import Food from './Food'
+import Blood from './Blood'
 import HomeOrg from './Home_org'
 import './App.css';
 import {LoginProvider} from './LoginContext'
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path="/disaster">
             <Disaster />
+          </Route>
+          <Route path="/blood">
+            <Blood />
           </Route>
           <Route path="/food">
             <Food />

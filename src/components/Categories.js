@@ -7,28 +7,34 @@ function Categories() {
     let category_row1=[
         {
             name:"Disaster Management System",
-            image:"/images/dis.jpg"
+            image:"/images/dis.jpg",
+            link:"/disaster"
         },
         {
             name:"Technical Support",
-            image:"/images/ts.jpg"
+            image:"/images/ts.jpg",
+            link:"/disaster"
         },
         {
             name:"Food Supply",
-            image:"/images/food.webp"
+            image:"/images/food.webp",
+            link:"/disaster"
         }]
     let category_row2=[
         {
             name:"Blood Donation",
-            image:"images/blood.jpg"
+            image:"images/blood.jpg",
+            link:"/blood"
         },
         {
             name:"Tutoring",
-            image:"/images/tut.jpg"
+            image:"/images/tut.jpg",
+            link:"/disaster"
         },
         {
             name:"Pain and Palliative",
-            image:"/images/pain.jpg"
+            image:"/images/pain.jpg",
+            link:"/disaster"
         }
     ]
 
@@ -39,7 +45,7 @@ function Categories() {
         {category_row1.map(category => (
             <Col className="grid__element">
             <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216",borderRadius:"30px"}}>
-            <Link to="/disaster" style={{textDecoration:"none"}}>
+            <Link to={category.link} style={{textDecoration:"none"}}>
             <Card.Img style={{borderRadius:"30px 30px 0px 0px"}}height="200px" variant="top" src={category.image} />
             <Card.Body>
             <Card.Title style={{color:"white",textAlign:"center"}}>{category.name}</Card.Title>
@@ -54,7 +60,7 @@ function Categories() {
         {category_row2.map(category => (
             <Col className="grid__element">
             <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216",borderRadius:"30px"}}>
-            <Link to="/disaster" style={{textDecoration:"none"}}>
+            <Link to={category.link} style={{textDecoration:"none"}}>
             <Card.Img style={{borderRadius:"30px 30px 0px 0px"}}height="200px" variant="top" src={category.image} />
             <Card.Body>
             <Card.Title style={{color:"white",textAlign:"center"}}>{category.name}</Card.Title>
