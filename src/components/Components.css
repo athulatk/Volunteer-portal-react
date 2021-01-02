@@ -1,6 +1,6 @@
 .urgent_board{
     background-color: #981041;
-    min-height: 100vh;
+    height: 100%;
 }
 .urgent_heading{
     padding-top: 4%;
@@ -36,8 +36,8 @@
 .posts{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-content: center;
+    justify-content: space-around;
     margin-top: 5%;
 }
 
