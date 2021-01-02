@@ -10,6 +10,7 @@ import Blood from './Blood'
 import HomeOrg from './Home_org'
 import './App.css';
 import {LoginProvider} from './LoginContext'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Switch,

@@ -1,5 +1,5 @@
 import React,{useState,useEffect}from 'react'
-import {Row,Col} from 'react-bootstrap'
+import {Row,Col,Container} from 'react-bootstrap'
 import Navbar3 from './components/Navbar3'
 import Navbar2 from './components/Navbar2'
 import Urgentneeds from './components/Urgentneeds'
@@ -16,20 +16,22 @@ function Home() {
     
              
     return (
-        <div>
+        <div className="home" style={{minHeight:'100vh'}}>
             <Navbar3/>
             <Navbar2/>
+            <Container fluid>
             <Row>
-            <Col sm={3}>
+            <Col lg={3}>
             <Urgentneeds/>
             </Col>
-            <Col sm={9}>
+            <Col>
             <div>
             <h3 style={{textAlign:"center",color:"#981041",marginTop:"2%"}}>Volunteer Here!</h3>
             <Categories/>
             </div>
             </Col>
             </Row>
+            </Container>
         </div>
     )
 }

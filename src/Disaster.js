@@ -3,13 +3,14 @@ import Navbar3 from './components/Navbar3'
 import Navbar2 from './components/Navbar2'
 import Urgentneeds from './components/Urgentneeds'
 import Postview from './components/Postview'
-import {Row,Col} from 'react-bootstrap'
+import {Row,Col,Container} from 'react-bootstrap'
 
 function Disaster() {
     return (
         <div>
             <Navbar3/>
             <Navbar2/>
+            <Container fluid>
             <Row>
             <Col sm={3}>
             <Urgentneeds/>
@@ -18,6 +19,7 @@ function Disaster() {
             <Postview/>
             </Col>
             </Row>
+            </Container>
         </div>
     )
 }

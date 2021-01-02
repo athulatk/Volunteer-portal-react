@@ -39,12 +39,12 @@ function Categories() {
     ]
 
     return (
-        <>
+        <div className="categories">
         <Container className="grid">
         <Row className="row">
         {category_row1.map(category => (
             <Col className="grid__element">
-            <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216",borderRadius:"30px"}}>
+            <Card className="card-sp" style={{ width: '20rem', height:'18rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216",borderRadius:"30px"}}>
             <Link to={category.link} style={{textDecoration:"none"}}>
             <Card.Img style={{borderRadius:"30px 30px 0px 0px"}}height="200px" variant="top" src={category.image} />
             <Card.Body>
@@ -59,7 +59,7 @@ function Categories() {
         <Row className="row">
         {category_row2.map(category => (
             <Col className="grid__element">
-            <Card style={{ width: '20rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216",borderRadius:"30px"}}>
+            <Card className="card-sp" style={{ width: '20rem' ,height:'18rem',margin:"5% 5% 5% 5%",backgroundColor:"#F58216",borderRadius:"30px"}}>
             <Link to={category.link} style={{textDecoration:"none"}}>
             <Card.Img style={{borderRadius:"30px 30px 0px 0px"}}height="200px" variant="top" src={category.image} />
             <Card.Body>
@@ -72,7 +72,7 @@ function Categories() {
         </Row>
 
         </Container>
-        </>
+        </div>
     )
 }
 

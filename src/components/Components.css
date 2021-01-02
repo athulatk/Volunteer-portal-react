@@ -1,6 +1,12 @@
 .urgent_board{
     background-color: #981041;
     height: 100%;
+    margin: 0;
+    min-height:83vh;
+    position: absolute;
+    left:0;
+    
+    
 }
 .urgent_heading{
     padding-top: 4%;
@@ -48,4 +54,20 @@
     outline: none;
     padding: 6px 25px;
     margin-left: 85%;
+}
+
+.card-sp:hover{
+    animation-name: card-hover;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes card-hover{
+    100%{
+        box-shadow: 0px 0px 40px 14px rgba(248, 138, 138, 0.74);
+        width: 21rem;
+        height:19rem;
+
+    }
 }
