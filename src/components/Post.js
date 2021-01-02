@@ -5,7 +5,11 @@ const Post = () =>{
 
     const[enrolled,setEnrolled]=useState(false);
 
-    
+
+
+    const handleClick = () =>{
+        setEnrolled(true);
+    }
 
     return(
             <Card style={{ 
@@ -30,7 +34,9 @@ const Post = () =>{
             <Card.Text>
             22/02/2020
             </Card.Text>
-            <button className="enroll" onClick={()=>setEnrolled(true)}>Enroll</button>
+            <button className="enroll" style={{display:enrolled?"none":"block"}} onClick={handleClick}>{enrolled?"Enrolled":"Enroll"}</button>
+            <p style={{color:"green",marginLeft:'85%',display:enrolled?"block":"none",fontSize:"larger",paddingLeft:"0.8em",fontWeight:"bolder"
+            }}>Enrolled</p>
             </Card.Body>
             </Card>
     )
