@@ -10,11 +10,9 @@
     list-style:none;
     display: flex;
     align-items: center;
-    justify-content:space-around;
-    width: 25%;
+    justify-content:flex-end;
     margin-top: 2%;
     margin-right: 2%;
-
 
 }
 .nav__btn{
@@ -25,6 +23,7 @@
    border-radius: 10px;
    outline: none !important;
    box-shadow: none !important;
+   margin: 0 2.5em 0 2.5em;
    
     
 }
@@ -115,14 +114,13 @@
 .user{
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
-    width:20%;
-    
+    justify-content:flex-end;
     
 }
 .navicon{
     display: flex;
     flex-direction: column;
+    padding:0 6em 0 2em;
     
 
 }
