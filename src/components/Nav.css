@@ -32,12 +32,19 @@
     background-color:#981041;
     min-height: 6vh;
     border-top: 8px solid #F58216;
+    padding-right: 2em;
 
 }
 .drop{
-    margin-right:5%;
+    padding:1em 2em 1em 2em;
     color: white;
     text-transform: uppercase;
+    
+}
+
+.drop:hover{
+    background-color: white;
+    color:#981041;
 }
 
 

@@ -3,6 +3,7 @@ import Navbar2 from './components/Navbar2'
 import Navbar3 from './components/Navbar3'
 import './Profile.css'
 import Activitycard from './components/Activitycard'
+import {Link} from 'react-router-dom'
 function Profile() {
     return (
         <div>
@@ -14,7 +15,7 @@ function Profile() {
                 <div className="profile_content profile__name">
                     <h3>Steve Rogers</h3>
                     <h6>steve70@shield.com</h6>
-                    <button className="update__profile__btn">View/Update Profile</button>
+                    <Link to="/update"><button className="update__profile__btn">View/Update Profile</button></Link>
                 </div>
             </div>
             <div>

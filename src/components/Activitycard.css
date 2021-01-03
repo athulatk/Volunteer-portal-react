@@ -4,8 +4,10 @@
     justify-content: space-between;
     border:1px solid crimson;
     border-radius: 10px;
-    background-color: #ddcad9;
-    background-image: linear-gradient(315deg, #ddcad9 0%, #d1b1cb 74%);
+    background-color: #f9d29d;
+background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
+
+
     margin:2% 2% 0 2%;
     padding:2%;
     color:black;

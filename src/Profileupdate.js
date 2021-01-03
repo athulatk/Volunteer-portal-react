@@ -5,7 +5,7 @@ import Navbar3 from './components/Navbar3'
 import {Row,Col,Container} from 'react-bootstrap'
 import './Profileupdate.css'
 function Profileupdate() {
-    const [profile, setProfile] = useState("N Athul Kumar")
+    const [profile, setProfile] = useState("Steve Rogers")
     return (
         <div>
             <Navbar3/>
