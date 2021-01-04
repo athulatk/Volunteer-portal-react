@@ -4,8 +4,7 @@ import {Card,Button,Modal} from 'react-bootstrap';
 
 function Modal1(props) {
     return (
-        <Modal {...props}
-      size="md"
+        <Modal show={props.show} onHide={props.onHide} size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -20,9 +19,9 @@ function Modal1(props) {
           Do you want to continue?
         </p>
       </Modal.Body>
-      <Modal.Footer style={{display:'flex'}}>
-        <Button onClick={props.onHide}>No</Button>
-        <Button variant="success" onClick={props.onHide}>Yes</Button>
+      <Modal.Footer>
+        <button className="no" onClick={props.onHide}>No</button>
+        <button className="yes" variant="success" onClick={()=>{props.enroll(); props.onHide();}}>Yes</button>
       </Modal.Footer>
     </Modal>
     )
@@ -32,13 +31,9 @@ const Post = () =>{
 
     const[enrolled,setEnrolled]=useState(false);
     const [modalShow, setModalShow] = useState(false);
-    const myref = useRef(null);
-
 
     const handleClick = () =>{
-        setEnrolled(true);
         setModalShow(true);
-
     }
 
     return(
@@ -65,7 +60,7 @@ const Post = () =>{
             <Card.Text>
             22/02/2020
             </Card.Text>
-            <button className="enroll" style={{display:enrolled?"none":"block"}} onClick={handleClick}>{enrolled?"Enrolled":"Enroll"}</button>
+            <button className="enroll" style={{display:enrolled?"none":"block"}} onClick={handleClick}>Enroll</button>
             <p style={{color:"green",marginLeft:'85%',display:enrolled?"block":"none",fontSize:"larger",paddingLeft:"0.8em",fontWeight:"bolder"
             }}>Enrolled</p>
             </Card.Body>
@@ -73,6 +68,7 @@ const Post = () =>{
             <Modal1
             show={modalShow}
             onHide={() => setModalShow(false)}
+            enroll={()=>setEnrolled(true)}
             />
             </>
     )

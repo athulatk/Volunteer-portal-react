@@ -85,3 +85,30 @@
         box-shadow: 0px 0px 40px 14px rgba(248, 138, 138, 0.74);
     }
 }
+.yes{
+    background-color:#1FAA59;
+    color: white;
+    text-align: right;
+    border: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none !important;
+    box-shadow: none !important;
+    margin-top:2em;
+    
+}
+
+.no{
+    background-color:red;
+    color: white;
+    text-align: right;
+    border: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none !important;
+    box-shadow: none !important;
+    margin-top:2em;
+   
+}
