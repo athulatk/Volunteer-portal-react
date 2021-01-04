@@ -1,10 +1,10 @@
-import React,{useState,useRef} from 'react';
+import React,{useState} from 'react';
 import './Components.css'
 import {Card,Button,Modal} from 'react-bootstrap';
 
 function Modal1(props) {
     return (
-        <Modal show={props.show} onHide={props.onHide} size="md"
+        <Modal show={props.show} onHide={props.onHide} animation={true} size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >

@@ -5,6 +5,7 @@ import Home from './Home'
 import Profile from './Profile'
 import Profileupdate from './Profileupdate'
 import Disaster from './Disaster'
+import Disasterorg from './organization/Disasterorg'
 import Food from './Food'
 import Blood from './Blood'
 import HomeOrg from './organization/Home_org'
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route path="/disaster">
             <Disaster />
+          </Route>
+          <Route path="/disasterorg">
+            <Disasterorg />
           </Route>
           <Route path="/blood">
             <Blood />
