@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar3 from './components/Navbar3'
-import Navbar2 from './components/Navbar2'
-import Categories from './components/Categories'
+import Navbar3 from '../components/Navbar3'
+import Navbar2 from '../components/Navbar2'
+import Categories from '../components/Categories'
 function Home_org() {
     return (
         <div>

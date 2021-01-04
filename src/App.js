@@ -7,7 +7,7 @@ import Profileupdate from './Profileupdate'
 import Disaster from './Disaster'
 import Food from './Food'
 import Blood from './Blood'
-import HomeOrg from './Home_org'
+import HomeOrg from './organization/Home_org'
 import './App.css';
 import {LoginProvider} from './LoginContext'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -33,7 +33,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/homeorg">
-            <HomeOrg />
+            <HomeOrg/>
           </Route>
           <Route path="/disaster">
             <Disaster />
