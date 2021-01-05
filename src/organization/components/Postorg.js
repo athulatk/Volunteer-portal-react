@@ -4,11 +4,11 @@ import './Postorg.css'
 
 
 
-const Postorg = () => {
+const Postorg = ({title,description,district,location,date}) => {
 
     return (
         <Card style={{
-            maxWidth: '60%',
+            maxWidth: '900px',
             minHeight: '20rem',
             borderRadius: "15px",
             marginBottom: '2em',
@@ -16,16 +16,16 @@ const Postorg = () => {
         }}>
 
             <Card.Body>
-                <Card.Title style={{ color: "#981041" }}>Lorem ipsum</Card.Title>
+            <Card.Title style={{ color: "#981041" }}>{title}</Card.Title>
                 <Card.Text>
                     <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate, turpis nec dictum viverra, neque urna rutrum lacus, vitae faucibus urna dolor ac risus. Mauris at blandit sem. In hac habitasse platea dictumst. Morbi eu cursus massa. Proin vehicula consequat ultrices. Nullam consectetur efficitur lacus sed commodo. Vivamus felis dolor, sodales vel nunc sit amet, accumsan luctus odio.
+            {description}
             </Card.Text>
                 <Card.Text>
-                    Location: Kannur
+                    Location: {location}, {district}
             </Card.Text>
                 <Card.Text>
-                    22/02/2020
+                {date}
             </Card.Text>
                 <div className="card_footer">
                     <button className="delete_button">Delete Event</button>
