@@ -2,6 +2,7 @@ import React from 'react'
 import './Components.css'
 import Post from './Post'
 //Checkout .posts css to remove or not
+
 function Postview() {
     return (
         <div className="postview">

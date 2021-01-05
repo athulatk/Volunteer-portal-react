@@ -2,14 +2,3 @@
   height: 100%;
   
 }
-button:hover{
-  animation-name:button-hover;
-  animation-duration: 1s;
-  animation-fill-mode:forwards;
-}
-@keyframes button-hover{
-  100%{
-    background-color:green;
-  }
-
-}

@@ -39,14 +39,6 @@
     padding: 6px 25px;
 }
 
-.posts{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-around;
-    margin-top: 5%;
-    overflow-y: scroll;
-}
 
 .enroll{
     background-color: #db7414;
