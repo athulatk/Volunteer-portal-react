@@ -89,6 +89,7 @@
     outline: none !important;
     box-shadow: none !important;
     margin-top:2em;
+    display: block;
     
 }
 
@@ -103,5 +104,6 @@
     outline: none !important;
     box-shadow: none !important;
     margin-top:2em;
+    display: block;
    
 }

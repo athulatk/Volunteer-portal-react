@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import './Postorg.css'
 
-
+//Give id
 
 const Postorg = ({title,description,district,location,date}) => {
 
     return (
         <Card style={{
-            maxWidth: '900px',
-            minHeight: '20rem',
+            maxWidth:"50rem",
             borderRadius: "15px",
             marginBottom: '2em',
-            boxShadow: "5px 5px gray"
+            boxShadow: "5px 5px gray",
+            marginLeft:'auto',
+            marginRight:'auto'
         }}>
 
             <Card.Body>
