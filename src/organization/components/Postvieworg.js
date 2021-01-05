@@ -65,7 +65,7 @@ function Postvieworg() {
             <p className="event__lab">Date </p>
             <input className="event__input" type="date" name="date" required/>
             <div className="event__btn">
-            <button className="yes" type="submit" onClick={handleClose}>Submit</button>
+            <button className="yes" type="submit" onClick={handleClose}>Add</button>
             </div>
             </form>
             </Modal.Body>
