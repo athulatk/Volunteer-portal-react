@@ -4,22 +4,24 @@ import Postorg from './Postorg'
 import './EventForm.css'
 function Postvieworg() {
 
-    const [events, setEvents] = useState([]);
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
     const[title,setTitle]=useState("");
     const[description,setDescription]=useState("");
     const[district,setDistrict]=useState("Alappuzha");
     const[location,setLocation]=useState("");
     const[date,setDate]=useState("");
 
+    const [events, setEvents] = useState([]);
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+   
+
 
     const eventSubmit = (e) => {
         e.preventDefault();
-        setEvents(events=>[...events,{title,description,district,location,date}]);
+        setEvents([...events,{title,description,district,location,date}]);
         
     }
 
@@ -39,8 +41,7 @@ function Postvieworg() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'space-around',
-                marginTop: '3%',
-                backgroundColor:'green'
+                marginTop: '3%'
             }}>
             <button className="yes mb-5" onClick={handleShow}>Add Event</button>
                 <Modal show={show} onHide={handleClose} animation={false}
@@ -51,7 +52,7 @@ function Postvieworg() {
                         <Modal.Title className="text-center">Add Event</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-            <form className="event__form" onSubmit={(e)=>{eventSubmit(e);handleClose();}}>
+            <form className="event__form" onSubmit={(e)=>{eventSubmit(e)}}>
             <p className="event__lab">Title</p>
             <input className="event__input" type="text" name="name" value={title} onChange={(e)=>{setTitle(e.target.value)}}required/>
             <p className="event__lab">Description</p>
@@ -84,13 +85,15 @@ function Postvieworg() {
             </Modal.Body>
             
                 </Modal>
+            <ul>
             {
                 events.map(event1=>{
                     return(
-                        <Postorg title={title} description={description} district={district} location={location} date={date}/>
+                        <li><Postorg title={title} description={description} district={district} location={location} date={date}/></li>
                     )
                 })
             }
+            </ul>
                 
             </div>
         </div>
