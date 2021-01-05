@@ -1,0 +1,24 @@
+.event__form{
+    margin-left:auto;
+    margin-right: auto;
+    padding:0 5em 0 5em;
+   
+}
+.event__input{
+    width: 100%;
+    border-radius: 5px;
+    border: 0.5px solid #981041;
+    outline: none;
+    min-height: 2em;
+    padding-left:0.5%;
+}
+
+.event__lab{
+    margin:1em 0 1em 0;
+}
+.event__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+}
