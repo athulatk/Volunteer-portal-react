@@ -26,7 +26,7 @@ function UrgentForm({show,handleClose,description,setDescription,phone,setPhone,
             <textarea className="event__input" rows="6" value={description} onChange={(e)=>{setDescription(e.target.value)}}/>
            
             <p className="event__lab">Phone Number </p>
-            <input className="event__input" type="text" name="location"  value={phone} onChange={(e)=>{setPhone(e.target.value)}}required/>
+            <input className="event__input" type="tel" name="phone" pattern="[0-9]{10}"  value={phone} onChange={(e)=>{setPhone(e.target.value)}}required/>
             <div className="event__btn">
             <button className="yes" type="submit">Submit</button>
             </div>

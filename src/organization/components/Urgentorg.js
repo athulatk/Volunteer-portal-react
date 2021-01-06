@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import {Card} from 'react-bootstrap'
 import DeleteIcon from '@material-ui/icons/Delete';
+import CallIcon from '@material-ui/icons/Call';
 import {Tooltip,OverlayTrigger} from 'react-bootstrap'
 
 const renderTooltip = (props) => (
@@ -31,7 +32,8 @@ function Urgentorg({description,phone,urgentneeds,setUrgentneeds,urgent}) {
         <Card.Body>
         {description}
         <br/>
-            <a href={`tel:${phone}`}>Call us at {phone}</a>
+        <br/>
+            <CallIcon/><a href={`tel:${phone}`} style={{textDecoration:'none',color:'black'}}> {phone}</a>
             <OverlayTrigger
             placement="bottom"
             delay={{ show: 250, hide: 400 }}
