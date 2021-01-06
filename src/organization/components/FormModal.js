@@ -2,10 +2,10 @@ import React from 'react'
 import {Modal} from 'react-bootstrap'
 
 function FormModal({title,description,district,location,date,show,handleClose,setTitle,setDescription,
-    events,setEvents,setDistrict,setLocation,setDate}) {
+    events,setEvents,setDistrict,setLocation,setDate,uuidv4}) {
     const eventSubmit = (e) => {
         e.preventDefault();
-        setEvents([{title,description,district,location,date},...events]);
+        setEvents([{title,description,district,location,date,id:uuidv4()},...events]);
         setTitle("");
         setDescription("");
         setDistrict("");
@@ -13,8 +13,9 @@ function FormModal({title,description,district,location,date,show,handleClose,se
         setDate("");
         
     }
+
     return (
-        <Modal show={show} onHide={handleClose} animation={false}
+        <Modal show={show} onHide={handleClose} animation={true}
                 size="lg"
                 aria-labelledby="contained-modal-title-vcenter"
                 centered>
@@ -49,7 +50,7 @@ function FormModal({title,description,district,location,date,show,handleClose,se
             <p className="event__lab">Date </p>
             <input className="event__input" type="date" name="date" value={date} onChange={(e)=>{setDate(e.target.value)}}required/>
             <div className="event__btn">
-            <button className="yes" type="submit">Add</button>
+            <button className="yes" type="submit">Submit</button>
             </div>
             </form>
             </Modal.Body>

@@ -16,7 +16,7 @@
 }
 
 .delete_button{
-    background-color: red;
+    background-color: rgb(202, 10, 10);
     color: white;
     border-radius: 10px;
     outline: none;

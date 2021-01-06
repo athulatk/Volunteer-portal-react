@@ -1,31 +1,10 @@
 import React,{useState} from 'react';
 import './Components.css'
-import {Card,Button,Modal} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
+import ConfirmModal from './ConfirmModal'
 
-function Modal1(props) {
-    return (
-        <Modal show={props.show} onHide={props.onHide} animation={true} size="md"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Confirmation
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Confirmation</h4>
-        <p>
-          Do you want to continue?
-        </p>
-      </Modal.Body>
-      <Modal.Footer>
-        <button className="no" onClick={props.onHide}>No</button>
-        <button className="yes" variant="success" onClick={()=>{props.enroll(); props.onHide();}}>Yes</button>
-      </Modal.Footer>
-    </Modal>
-    )
-}
+
+
 
 const Post = () =>{
 
@@ -65,10 +44,13 @@ const Post = () =>{
             }}>Enrolled</p>
             </Card.Body>
             </Card>
-            <Modal1
+            <ConfirmModal
             show={modalShow}
             onHide={() => setModalShow(false)}
             enroll={()=>setEnrolled(true)}
+            heading="Confirmation"
+            subheading="Confirmation"
+            text="Do you want to continue?"
             />
             </>
     )

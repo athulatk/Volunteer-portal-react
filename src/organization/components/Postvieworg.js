@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import FormModal from './FormModal'
 import Postorg from './Postorg'
 import './EventForm.css'
-import { isWidthDown } from '@material-ui/core';
+import AddBoxIcon from '@material-ui/icons/AddBox';
+import { v4 as uuidv4 } from 'uuid';
 function Postvieworg() {
 
     const[title,setTitle]=useState("");
@@ -32,8 +33,8 @@ function Postvieworg() {
 
             
             <div className="posts">
-            <button className="yes mb-5 ml-auto mr-auto" onClick={handleShow}>Add Event</button>
-            <FormModal title={title} description={description} district={district} location={location} date={date} 
+            <button className="yes mb-5 ml-auto mr-auto" onClick={handleShow}><AddBoxIcon style={{marginBottom:'4.5px'}}/> Add Event</button>
+            <FormModal uuidv4={uuidv4} title={title} description={description} district={district} location={location} date={date} 
             setTitle={setTitle} setDescription={setDescription} setDistrict={setDistrict} setLocation={setLocation} setDate={setDate}
             events={events} setEvents={setEvents}
             show={show} handleClose={handleClose}/>
@@ -41,7 +42,9 @@ function Postvieworg() {
             {
                 events.map(event1=>{
                     return(
-                        <li style={{listStyle:'none'}}><Postorg title={event1.title} description={event1.description} district={event1.district} location={event1.location} date={event1.date}/></li>
+                        <Postorg key={event1.id} event1={event1} title={event1.title} description={event1.description} 
+                        district={event1.district} location={event1.location}
+                        date={event1.date} events={events} setEvents={setEvents}/>
                     )
                 })
             }

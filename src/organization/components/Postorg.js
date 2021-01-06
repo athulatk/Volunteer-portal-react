@@ -1,12 +1,26 @@
 import React, { useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 import './Postorg.css'
+import ConfirmModal2 from './ConfirmModal2'
+import DeleteIcon from '@material-ui/icons/Delete';
 
 //Give id
 
-const Postorg = ({title,description,district,location,date}) => {
+const Postorg = ({title,description,district,location,date,events,setEvents,event1}) => {
+
+    const [modalShow, setModalShow] = useState(false);
+
+    const deleteModal = () =>{
+        setModalShow(true)
+        
+    }
+
+    const deleteEvent = () =>{
+        setEvents(events.filter(el=>el.id!==event1.id))
+    }
 
     return (
+        <>
         <Card style={{
             maxWidth:"50rem",
             borderRadius: "15px",
@@ -29,11 +43,19 @@ const Postorg = ({title,description,district,location,date}) => {
                 {date}
             </Card.Text>
                 <div className="card_footer">
-                    <button className="delete_button">Delete Event</button>
+                    <button className="delete_button" onClick={deleteModal}><DeleteIcon style={{fontSize:'large',marginBottom:'4.5px'}}/> Delete Event</button>
                     <button className="view_button">View Enrolled Volunteers</button>
                 </div>
             </Card.Body>
         </Card>
+        <ConfirmModal2
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        heading="Confirmation"
+        text={`Are you sure you want to delete the event ${title}?`}
+        deleteEvent={deleteEvent}
+        />
+        </>
     )
 
 }

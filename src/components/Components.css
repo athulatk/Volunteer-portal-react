@@ -79,7 +79,7 @@
     }
 }
 .yes{
-    background-color:#1FAA59;
+    background-color:#119749;
     color: white;
     text-align: right;
     border: none;
@@ -94,7 +94,7 @@
 }
 
 .no{
-    background-color:red;
+    background-color:rgb(202, 10, 10);
     color: white;
     text-align: right;
     border: none;
