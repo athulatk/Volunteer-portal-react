@@ -22,3 +22,17 @@
     outline: none;
     padding: 6px 25px;
 }
+
+.addurgent{
+    background-color: white;
+    color: #981041;
+    text-align: right;
+    border: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none !important;
+    box-shadow: none !important;
+    margin-top:2em;
+    display: block;
+}

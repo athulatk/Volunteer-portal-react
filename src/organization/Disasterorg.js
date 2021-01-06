@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar3 from '../components/Navbar3'
 import Navbar2 from '../components/Navbar2'
-import Urgentneeds from '../components/Urgentneeds'
-import Postview from './components/Postvieworg'
+import Urgentsorg from './components/Urgentsorg'
+import Postvieworg from './components/Postvieworg'
 import {Row,Col,Container} from 'react-bootstrap'
 
 function Disasterorg() {
@@ -13,10 +13,10 @@ function Disasterorg() {
             <Container fluid>
             <Row>
             <Col sm={3}>
-            <Urgentneeds/>
+            <Urgentsorg/>
             </Col>
             <Col sm={9}>
-            <Postview/>
+            <Postvieworg/>
             </Col>
             </Row>
             </Container>
