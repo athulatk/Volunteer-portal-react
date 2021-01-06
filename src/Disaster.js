@@ -12,10 +12,10 @@ function Disaster() {
             <Navbar2/>
             <Container fluid>
             <Row>
-            <Col sm={3}>
+            <Col lg={3} style={{padding:'0'}}>
             <Urgentneeds/>
             </Col>
-            <Col sm={9}>
+            <Col lg={9} style={{padding:'0'}}>
             <Postview/>
             </Col>
             </Row>

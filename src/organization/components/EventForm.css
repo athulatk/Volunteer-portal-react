@@ -22,3 +22,14 @@
     justify-content: center;
     margin-bottom: 1em;
 }
+
+.delete-icon{
+    font-size:33;
+    position:absolute;
+    right:20px;
+    color:red;
+}
+
+.delete-icon:hover{
+    cursor: pointer;
+}

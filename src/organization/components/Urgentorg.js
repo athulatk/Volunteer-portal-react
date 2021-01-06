@@ -1,6 +1,22 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Card} from 'react-bootstrap'
-function Urgentorg() {
+import DeleteIcon from '@material-ui/icons/Delete';
+import {Tooltip,OverlayTrigger} from 'react-bootstrap'
+
+const renderTooltip = (props) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Delete
+    </Tooltip>
+)
+
+function Urgentorg({description,phone,urgentneeds,setUrgentneeds,urgent}) {
+
+    
+
+    const deleteNeed = () =>{
+        setUrgentneeds(urgentneeds.filter(el=>el.id!==urgent.id))
+    }
+
     return (
         <div>
             <Card 
@@ -13,10 +29,17 @@ function Urgentorg() {
             boxShadow:"black"}}>
 
         <Card.Body>
-        Important requirement at lorem ipsum dolor set amet alkfjlkajfa flskdjf alkfdj l aldkfj lakjlkjlkjlkjlkadf lkaf alkdfjlakfjlaf  lkjfdlkajfl af lajfsldkjflajf
+        {description}
         <br/>
-        <a href="tel:8606894094">Call us at 8606894094</a>
-        </Card.Body>
+            <a href={`tel:${phone}`}>Call us at {phone}</a>
+            <OverlayTrigger
+            placement="bottom"
+            delay={{ show: 250, hide: 400 }}
+            overlay={renderTooltip}
+            >
+            <DeleteIcon className="delete-icon" onClick={deleteNeed}/>
+            </OverlayTrigger>
+        </Card.Body> 
 
         </Card>
         </div>

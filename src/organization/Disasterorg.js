@@ -12,10 +12,10 @@ function Disasterorg() {
             <Navbar2/>
             <Container fluid>
             <Row>
-            <Col sm={3}>
+            <Col lg={3} style={{padding:'0'}}>
             <Urgentsorg/>
             </Col>
-            <Col sm={9}>
+            <Col lg={9} style={{padding:'0'}}>
             <Postvieworg/>
             </Col>
             </Row>
