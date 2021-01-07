@@ -21,13 +21,13 @@ function Home() {
             <Navbar2/>
             <Container fluid>
             <Row>
-            <Col lg={3}>
+            <Col lg={3} style={{padding:'0'}}>
             <Urgentneeds/>
             </Col>
             <Col>
             <div>
             <h3 style={{textAlign:"center",color:"#981041",marginTop:"2%"}}>Volunteer Here!</h3>
-            <Categories/>
+            <Categories style={{padding:'0'}}/>
             </div>
             </Col>
             </Row>

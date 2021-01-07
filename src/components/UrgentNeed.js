@@ -1,5 +1,6 @@
 import React from 'react'
 import {Card} from 'react-bootstrap'
+import CallIcon from '@material-ui/icons/Call';
 function UrgentNeed() {
     return (
         <div>
@@ -15,7 +16,8 @@ function UrgentNeed() {
         <Card.Body>
         Important requirement at lorem ipsum dolor set amet alkfjlkajfa flskdjf alkfdj l aldkfj lakjlkjlkjlkjlkadf lkaf alkdfjlakfjlaf  lkjfdlkajfl af lajfsldkjflajf
         <br/>
-        <a href="tel:8606894094">Call us at 8606894094</a>
+        <br/>
+        <a href="tel:8606894094" style={{textDecoration:'none',color:'black'}}><CallIcon/> 8606894094</a>
         </Card.Body>
 
         </Card>

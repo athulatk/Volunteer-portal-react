@@ -105,3 +105,22 @@
     display: block;
    
 }
+
+.urgent_searchbar{
+    border-radius: 10px 0 0 10px;
+    width: 60%;
+    border: none;
+    outline: none;
+    padding:6px 6px 6px 8px;
+    margin:10px 0 10px 0;
+    
+}
+.search_button2{
+    background-color: white;
+    color:black;
+    border:none;
+    padding: 6px;
+    outline: none;
+    border-radius: 0 10px 10px 0;
+
+}

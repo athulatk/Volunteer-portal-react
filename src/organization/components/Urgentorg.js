@@ -33,7 +33,7 @@ function Urgentorg({description,phone,urgentneeds,setUrgentneeds,urgent}) {
         {description}
         <br/>
         <br/>
-            <CallIcon/><a href={`tel:${phone}`} style={{textDecoration:'none',color:'black'}}> {phone}</a>
+            <a href={`tel:${phone}`} style={{textDecoration:'none',color:'black'}}><CallIcon/> {phone}</a>
             <OverlayTrigger
             placement="bottom"
             delay={{ show: 250, hide: 400 }}
