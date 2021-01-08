@@ -1,3 +1,35 @@
 .App{
   height: 100%;
 }
+
+
+button:hover{
+  animation-name: enroll-hover;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+
+}
+button.addurgent:hover{
+  animation: none;
+}
+
+button.no:hover{
+  animation: none;
+}
+
+button.search_button2:hover{
+  animation-name: search-hover;
+  animation-duration: 0.5s;
+}
+
+@keyframes search-hover{
+  100%{
+    background-color:#db7414;
+    color: white;
+  }
+}
+@keyframes enroll-hover{
+  100%{
+    background-color: green;
+  }
+}

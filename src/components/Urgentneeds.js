@@ -7,8 +7,10 @@ function Urgentneeds() {
         <div className="urgent_board">
             <h2 className="urgent_heading">Urgent Needs</h2>
         <div className="text-center">
+        <form>
         <input type="text" placeholder="Search urgent needs.."className="urgent_searchbar"/>
-        <button className="search_button2"><SearchIcon/></button>
+        <button type="submit" className="search_button2"><SearchIcon/></button>
+        </form>
         </div>
         <div className="urgent_cards">
         

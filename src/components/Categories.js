@@ -6,7 +6,7 @@ function Categories() {
 
     let category_row1=[
         {
-            name:"Disaster Management System",
+            name:"Disaster Management Support",
             image:"/images/dis.jpg",
             link:"/disaster"
         },
