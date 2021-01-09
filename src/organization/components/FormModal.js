@@ -25,9 +25,9 @@ function FormModal({title,description,district,location,date,show,handleClose,se
                     <Modal.Body>
             <form className="event__form" onSubmit={(e)=>{eventSubmit(e);handleClose();}}>
             <p className="event__lab">Title</p>
-            <input className="event__input" type="text" name="name" value={title} onChange={(e)=>{setTitle(e.target.value)}}required/>
+            <input className="event__input" placeholder="Provide a title" type="text" name="name" value={title} onChange={(e)=>{setTitle(e.target.value)}}required/>
             <p className="event__lab">Description</p>
-            <textarea className="event__input" rows="6" value={description} onChange={(e)=>{setDescription(e.target.value)}}/>
+            <textarea className="event__input" rows="6" value={description} onChange={(e)=>{setDescription(e.target.value)}} placeholder="Describe the activity and requirements.."/>
             <p className="event__lab">District</p>
             <select className="event__input" name="district" id="district2" value={district} onChange={(e)=>setDistrict(e.target.value)} required>
                         <option value="Alappuzha">Alappuzha</option>
@@ -46,9 +46,9 @@ function FormModal({title,description,district,location,date,show,handleClose,se
                         <option value="Wayanad">Wayanad</option>
                         </select>
             <p className="event__lab">Location </p>
-            <input className="event__input" type="text" name="location"  value={location} onChange={(e)=>{setLocation(e.target.value)}}required/>
+            <input className="event__input" type="text" name="location"  placeholder="Address" value={location} onChange={(e)=>{setLocation(e.target.value)}}required/>
             <p className="event__lab">Date </p>
-            <input className="event__input" type="date" name="date" value={date} onChange={(e)=>{setDate(e.target.value)}}required/>
+            <input className="event__input" type="date" name="date" value={date} onChange={(e)=>{setDate(e.target.value)}} required/>
             <div className="event__btn">
             <button className="yes" type="submit">Submit</button>
             </div>

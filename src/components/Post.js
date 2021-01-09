@@ -49,8 +49,7 @@ const Post = () =>{
             onHide={() => setModalShow(false)}
             enroll={()=>setEnrolled(true)}
             heading="Confirmation"
-            subheading="Confirmation"
-            text="Do you want to continue?"
+            text={`You will be enrolled to the activity activityname. Do you want to continue??`}
             />
             </>
     )

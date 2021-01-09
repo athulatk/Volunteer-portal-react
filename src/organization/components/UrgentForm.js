@@ -23,10 +23,10 @@ function UrgentForm({show,handleClose,description,setDescription,phone,setPhone,
                     <Modal.Body>
             <form className="event__form" onSubmit={(e)=>{eventSubmit(e);handleClose();}}>
             <p className="event__lab">Description</p>
-            <textarea className="event__input" rows="6" value={description} onChange={(e)=>{setDescription(e.target.value)}}/>
+            <textarea className="event__input" placeholder="Provide a description" rows="6" value={description} onChange={(e)=>{setDescription(e.target.value)}} required/>
            
             <p className="event__lab">Phone Number </p>
-            <input className="event__input" type="tel" name="phone" pattern="[0-9]{10}"  value={phone} onChange={(e)=>{setPhone(e.target.value)}}required/>
+            <input className="event__input" type="tel" name="phone" pattern="[0-9]{10}"  placeholder="Enter contact number" value={phone} onChange={(e)=>{setPhone(e.target.value)}}required/>
             <div className="event__btn">
             <button className="yes" type="submit">Submit</button>
             </div>

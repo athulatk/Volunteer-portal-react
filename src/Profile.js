@@ -25,8 +25,6 @@ function Profile() {
             <Activitycard/>
             <Activitycard/>
             </div> 
-            
-
         </div>
         </div>
         

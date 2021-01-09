@@ -17,6 +17,14 @@ button.no:hover{
   animation: none;
 }
 
+button.delete_button:hover{
+  animation: none;
+}
+
+button.view_button:hover{
+  animation: none;
+}
+
 button.search_button2:hover{
   animation-name: search-hover;
   animation-duration: 0.5s;

@@ -14,7 +14,7 @@ function Blood() {
                 <Container>
                     <Row>
                         <Col lg={2} ><p className="form2__lab">Name</p></Col>
-                        <Col lg={10}><input className="blood__input" type="text" name="name"/></Col>
+                        <Col lg={10}><input className="blood__input" type="text" name="name" required/></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">Blood Group</p></Col>
@@ -32,12 +32,20 @@ function Blood() {
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">DOB</p></Col>
-                        <Col lg={10}><input className="blood__input" type="date" value="1999-04-21" name="dob"/></Col>
+                        <Col lg={10}><input className="blood__input" type="date" value="1999-04-21" name="dob" required/></Col>
+                    </Row>
+                    <Row>
+                    <Col lg={2}><p className="form2__lab">Sex</p></Col>
+                        <Col lg={10}><select className="blood__input" name="district" id="district">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                        </select></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">District</p></Col>
                         <Col lg={10}>
-                        <select className="blood__input" name="district" id="district">
+                        <select className="blood__input" name="district" id="district" required>
                         <option value="Alappuzha">Alappuzha</option>
                         <option value="Ernakulam">Ernakulam</option>
                         <option value="Idukki">Idukki</option>
@@ -57,10 +65,11 @@ function Blood() {
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">Phone Number</p></Col>
-                        <Col lg={10}><input className="blood__input" type="tel" name="phone" pattern="[0-9]{10}"/></Col>
+                        <Col lg={10}><input className="blood__input" type="tel" name="phone" pattern="[0-9]{10}" required/></Col>
                     </Row>
-                    <input className="blood__check" type="checkbox" id="agree" name="agree" value="Yes"/>
-                    <label for="agree"> I am willing to donate my blood and share my details</label>
+                        <input className="blood__check" type="checkbox" id="agree" name="agree" value="Yes" style={{marginBottom:'0'}} required/>
+                        <label for="agree" className="form2__lab"> I hereby declare that all the information provided above are correct. I am willing to donate my blood and share my details.</label>
+                    
                    
                 </Container>
                 <button type="submit" className="blood__btn">Submit</button>
