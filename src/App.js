@@ -24,37 +24,16 @@ function App() {
     <div className="App">
       <Router>
       <Switch>
-          <Route exact path="/">
-            <Welcome/>
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/homeorg">
-            <HomeOrg/>
-          </Route>
-          <Route path="/disaster">
-            <Disaster />
-          </Route>
-          <Route path="/disasterorg">
-            <Disasterorg />
-          </Route>
-          <Route path="/blood">
-            <Blood />
-          </Route>
-          <Route path="/food">
-            <Food />
-          </Route>
-          <Route path="/profile">
-            <Profile/>
-          </Route>
-          <Route path="/update">
-            <Profileupdate/>
-          </Route>
-        </Switch>
+          <Route exact path="/" component={Welcome}/>
+          <Route path="/signup" component={Signup}/>
+          <Route exact path="/home" component={Home}/>
+          <Route path="/homeorg" component={HomeOrg}/>
+          <Route path="/disaster" component={Disaster}/>
+          <Route path="/disasterorg" component={Disasterorg}/>
+          <Route path="/blood" component={Blood}/>
+          <Route path="/profile" component={Profile}/>
+          <Route path="/update" component={Profileupdate}/>
+       </Switch>
         </Router>
     </div>
     </LoginProvider>
