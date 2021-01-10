@@ -15,7 +15,7 @@ function Profile() {
                 <div className="profile_content profile__name">
                     <h3>Steve Rogers</h3>
                     <h6>steve70@shield.com</h6>
-                    <Link to="/update"><button className="update__profile__btn">View/Update Profile</button></Link>
+                    <Link to="/profile/update"><button className="update__profile__btn">View/Update Profile</button></Link>
                 </div>
             </div>
             <div>

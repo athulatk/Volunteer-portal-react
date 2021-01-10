@@ -23,7 +23,7 @@ function Categories() {
     let category_row2=[
         {
             name:"Blood Donation",
-            image:"images/blood.jpg",
+            image:"/images/blood.jpg",
             link:"/blood"
         },
         {

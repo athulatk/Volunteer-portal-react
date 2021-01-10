@@ -11,7 +11,7 @@ function Navbar3() {
             <nav className="nav">
             <div className="head">
             <Link to="/home">
-            <img className="header__logo" src="images/brand.png" alt=""/>
+            <img className="header__logo" src="/images/brand.png" alt=""/>
             </Link>
         </div>
                 <div className="user">

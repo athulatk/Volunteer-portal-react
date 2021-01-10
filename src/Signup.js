@@ -20,7 +20,7 @@ function Signup() {
   
     const handleClose = () => {
         setShow(false);
-        history.push("/update")
+        history.push("/profile/update")
     }
     const handleShow = () => setShow(true);
 
