@@ -1,10 +1,18 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Navbar3 from './components/Navbar3'
 import Navbar2 from './components/Navbar2'
 import {Row,Col,Container} from 'react-bootstrap'
 import './Blood.css'
 
 function Blood() {
+
+    const[name,setName]=useState("");
+    const[bloodgrp,setBloodgrp]=useState("");
+    const[dob,setDob]=useState("");
+    const[sex,setSex]=useState("");
+    const[district,setDistrict]=useState("");
+    const[phone,setPhone]=useState("");
+    const[confirm,setConfirm]=useState("");
     return (
         <div>
             <Navbar3/>
@@ -14,12 +22,12 @@ function Blood() {
                 <Container>
                     <Row>
                         <Col lg={2} ><p className="form2__lab">Name</p></Col>
-                        <Col lg={10}><input className="blood__input" type="text" name="name" required/></Col>
+                        <Col lg={10}><input className="blood__input" type="text" name="name" value={name} onChange={(e)=>setName(e.target.value)}required/></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">Blood Group</p></Col>
                         <Col lg={10}> 
-                        <select name="blood__group" className="blood__input" id="blood_grp">
+                        <select name="blood__group" className="blood__input" id="blood_grp" value={bloodgrp} onChange={(e)=>setBloodgrp(e.target.value)}>
                         <option value="A+">A+</option>
                         <option value="A-">A-</option> 
                         <option value="B+">B+</option> 
@@ -32,11 +40,11 @@ function Blood() {
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">DOB</p></Col>
-                        <Col lg={10}><input className="blood__input" type="date" value="1999-04-21" name="dob" required/></Col>
+                        <Col lg={10}><input className="blood__input" type="date" value={dob} name="dob" onChange={(e)=>setDob(e.target.value)} required/></Col>
                     </Row>
                     <Row>
                     <Col lg={2}><p className="form2__lab">Sex</p></Col>
-                        <Col lg={10}><select className="blood__input" name="district" id="district">
+                        <Col lg={10}><select className="blood__input" name="district" id="district" value={sex} onChange={(e)=>{setSex(e.target.value)}}>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Others">Others</option>
@@ -45,7 +53,8 @@ function Blood() {
                     <Row>
                         <Col lg={2}><p className="form2__lab">District</p></Col>
                         <Col lg={10}>
-                        <select className="blood__input" name="district" id="district" required>
+                        <select className="blood__input" name="district" id="district" value={district} onChange={(e)=>{setDistrict(e.target.value)}} required>
+                        <option value="">Select district</option>
                         <option value="Alappuzha">Alappuzha</option>
                         <option value="Ernakulam">Ernakulam</option>
                         <option value="Idukki">Idukki</option>
@@ -65,9 +74,9 @@ function Blood() {
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">Phone Number</p></Col>
-                        <Col lg={10}><input className="blood__input" type="tel" name="phone" pattern="[0-9]{10}" required/></Col>
+                        <Col lg={10}><input className="blood__input" type="tel" name="phone" pattern="[0-9]{10}" value={phone} onChange={(e)=>{setPhone(e.target.value)}} required/></Col>
                     </Row>
-                        <input className="blood__check" type="checkbox" id="agree" name="agree" value="Yes" style={{marginBottom:'0'}} required/>
+                        <input className="blood__check" type="checkbox" id="agree" name="agree" value="Yes" style={{marginBottom:'0'}} onChange={(e)=>{setConfirm("Yes")}}required/>
                         <label for="agree" className="form2__lab"> I hereby declare that all the information provided above are correct. I am willing to donate my blood and share my details.</label>
                     
                    

@@ -17,6 +17,7 @@ import {
   Route
 } from "react-router-dom";
 import VolunteerView from './organization/VolunteerView'
+import BloodOrg from './organization/BloodOrg'
 function App() {
 
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route exact path="/disasterorg" component={Disasterorg}/>
           <Route path="/disasterorg/:eventid" component={VolunteerView}/>
           <Route path="/blood" component={Blood}/>
+          <Route path="/bloodorg" component={BloodOrg}/>
           <Route exact path="/profile" component={Profile}/>
           <Route path="/profile/update" component={Profileupdate}/>
        </Switch>

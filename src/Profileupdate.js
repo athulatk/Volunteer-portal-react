@@ -5,7 +5,13 @@ import Navbar3 from './components/Navbar3'
 import {Row,Col,Container} from 'react-bootstrap'
 import './Profileupdate.css'
 function Profileupdate() {
-    const [profile, setProfile] = useState("Steve Rogers")
+    const [name, setName] = useState("");
+    const [email,setEmail] = useState("");
+    const [dob,setDob] = useState("");
+    const [institution,setInstitution] = useState("");
+    const [district,setDistrict] = useState("");
+    const [phone,setPhone] = useState("");
+    const [pic,setPic] = useState("");
     return (
         <div>
             <Navbar3/>
@@ -22,24 +28,24 @@ function Profileupdate() {
                 <Container>
                     <Row>
                         <Col lg={2} ><p className="form2__lab">Name</p></Col>
-                        <Col lg={10}><input className="update__input" type="text" value={profile} name="name" onChange={(e)=>{setProfile(e.target.value)}}/></Col>
+                        <Col lg={10}><input className="update__input" type="text" value={name} name="name" onChange={(e)=>{setName(e.target.value)}}/></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">Email </p></Col>
-                        <Col lg={10}><input className="update__input" type="email" name="email" value="steve70@gmail.com" disabled/></Col>
+                        <Col lg={10}><input className="update__input" type="email" name="email" value={email} disabled/></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">DOB</p></Col>
-                        <Col lg={10}><input className="update__input" type="date" value="1999-04-21" name="dob"/></Col>
+                        <Col lg={10}><input className="update__input" type="date" value={dob}  onChange={(e)=>setDob(e.target.value)} name="dob"/></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">Institution</p></Col>
-                        <Col lg={10}><input className="update__input" type="text" name="institution"/></Col>
+                        <Col lg={10}><input className="update__input" type="text" value={institution} onChange={(e)=>{setInstitution(e.target.value)}}name="institution"/></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">District</p></Col>
                         <Col lg={10}>
-                        <select className="update__input" name="district" id="district">
+                        <select className="update__input" name="district" id="district" value={district} onChange={(e)=>{setDistrict(e.target.value)}}>
                         <option value="Alappuzha">Alappuzha</option>
                         <option value="Ernakulam">Ernakulam</option>
                         <option value="Idukki">Idukki</option>
@@ -59,11 +65,11 @@ function Profileupdate() {
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">Phone Number</p></Col>
-                        <Col lg={10}><input className="update__input" type="tel" name="phone" pattern="[0-9]{10}"/></Col>
+                        <Col lg={10}><input className="update__input" type="tel" name="phone" pattern="[0-9]{10}" value={phone} onChange={(e)=>{setPhone(e.target.value)}}/></Col>
                     </Row>
                     <Row>
                         <Col lg={2}><p className="form2__lab">Profile Picture</p></Col>
-                        <Col lg={10}><input className="update__input" type="text" placeholder="Image URL" name="pic"/></Col>
+                        <Col lg={10}><input className="update__input" type="text" placeholder="Image URL" value={pic} onChange={(e)=>{setPic(e.target.value)}} name="pic"/></Col>
                     </Row>
                 </Container>
                 <button type="submit" className="save_btn">Save Changes</button>

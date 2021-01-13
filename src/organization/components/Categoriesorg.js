@@ -24,17 +24,17 @@ function Categoriesorg() {
         {
             name:"Blood Donation",
             image:"images/blood.jpg",
-            link:"/blood"
+            link:"/bloodorg"
         },
         {
             name:"Tutoring",
             image:"/images/tut.jpg",
-            link:"/disaster"
+            link:"/disasterorg"
         },
         {
             name:"Pain and Palliative",
             image:"/images/pain.jpg",
-            link:"/disaster"
+            link:"/disasterorg"
         }
     ]
 
