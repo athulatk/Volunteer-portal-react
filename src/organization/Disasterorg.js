@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar3 from '../components/Navbar3'
+import Navbar4 from '../components/Navbar4'
 import Navbar2 from '../components/Navbar2'
 import Urgentsorg from './components/Urgentsorg'
 import Postvieworg from './components/Postvieworg'
@@ -8,7 +8,7 @@ import {Row,Col,Container} from 'react-bootstrap'
 function Disasterorg() {
     return (
         <div>
-            <Navbar3/>
+            <Navbar4/>
             <Navbar2/>
             <Container fluid>
             <Row>

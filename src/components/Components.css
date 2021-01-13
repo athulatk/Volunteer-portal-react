@@ -56,10 +56,8 @@
 
 @keyframes card-hover{
     100%{
-        box-shadow: 0px 0px 40px 14px rgba(248, 138, 138, 0.74);
-        width: 21rem;
-        height:19rem;
-
+        box-shadow: 0px 20px 40px 0px rgba(248, 138, 138, 0.74);
+        transform: translate(0px,-14px);
     }
 }
 

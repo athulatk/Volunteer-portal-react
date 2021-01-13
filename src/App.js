@@ -16,6 +16,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import VolunteerView from './organization/VolunteerView'
 function App() {
 
   return (
@@ -28,7 +29,8 @@ function App() {
           <Route path="/home" component={Home}/>
           <Route path="/homeorg" component={HomeOrg}/>
           <Route path="/disaster" component={Disaster}/>
-          <Route path="/disasterorg" component={Disasterorg}/>
+          <Route exact path="/disasterorg" component={Disasterorg}/>
+          <Route path="/disasterorg/:eventid" component={VolunteerView}/>
           <Route path="/blood" component={Blood}/>
           <Route exact path="/profile" component={Profile}/>
           <Route path="/profile/update" component={Profileupdate}/>

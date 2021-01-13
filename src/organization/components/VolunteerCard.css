@@ -1,0 +1,28 @@
+.volunteer-view{
+    position: relative;
+}
+.enrolled_details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5%;
+    grid-row-gap: 2em;
+    width: 80%;
+}
+.enrolled_label{
+    color: rgb(121, 118, 118);
+}
+.enrolled_value{
+    font-size: larger;
+    color: #981041;
+}
+.main_head{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}
+.application_status{
+    position: absolute;
+    right: 110px;
+    top: 0;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Card} from 'react-bootstrap';
 import './Postorg.css'
+import { Link } from 'react-router-dom'
 import ConfirmModal2 from './ConfirmModal2'
 import DeleteIcon from '@material-ui/icons/Delete';
 
@@ -44,7 +45,7 @@ const Postorg = ({title,description,district,location,date,events,setEvents,even
             </Card.Text>
                 <div className="card_footer">
                     <button className="delete_button" onClick={deleteModal}><DeleteIcon style={{fontSize:'large',marginBottom:'4.5px'}}/> Delete Event</button>
-                    <button className="view_button">View Enrolled Volunteers</button>
+                    <Link to={`/disasterorg/${title}`}><button className="view_button">View Enrolled Volunteers</button></Link>
                 </div>
             </Card.Body>
         </Card>
