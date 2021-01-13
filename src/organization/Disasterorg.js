@@ -5,7 +5,7 @@ import Urgentsorg from './components/Urgentsorg'
 import Postvieworg from './components/Postvieworg'
 import {Row,Col,Container} from 'react-bootstrap'
 
-function Disasterorg() {
+function Disasterorg({match}){
     return (
         <div>
             <Navbar4/>
@@ -13,10 +13,10 @@ function Disasterorg() {
             <Container fluid>
             <Row>
             <Col lg={3} style={{padding:'0'}}>
-            <Urgentsorg/>
+            <Urgentsorg type={match.params.type}/>
             </Col>
             <Col lg={9} style={{padding:'0'}}>
-            <Postvieworg/>
+            <Postvieworg type={match.params.type}/>
             </Col>
             </Row>
             </Container>

@@ -30,8 +30,8 @@ function App() {
           <Route path="/home" component={Home}/>
           <Route path="/homeorg" component={HomeOrg}/>
           <Route path="/disaster" component={Disaster}/>
-          <Route exact path="/disasterorg" component={Disasterorg}/>
-          <Route path="/disasterorg/:eventid" component={VolunteerView}/>
+          <Route exact path="/org/:type" component={Disasterorg}/>
+          <Route path="/org/:type/:eventid" component={VolunteerView}/>
           <Route path="/blood" component={Blood}/>
           <Route path="/bloodorg" component={BloodOrg}/>
           <Route exact path="/profile" component={Profile}/>

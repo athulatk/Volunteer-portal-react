@@ -1,12 +1,14 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import {useHistory} from 'react-router-dom'
 import {Modal} from 'react-bootstrap'
 import Navbar1 from './components/Navbar1'
 import Navbar2 from './components/Navbar2'
 import axios from 'axios'
 import './Signup.css'
+import {LoginContext} from './LoginContext'
 function Signup() {
 
+    const[loginstatus,setLoginstatus]=useContext(LoginContext)
     const[name,setName]=useState("");
     const[designation,setDesignation]=useState("");
     const[email,setEmail]=useState("");
@@ -41,6 +43,7 @@ function Signup() {
             }
             else{
                 setStatus("Success")
+                //set name email logged to login context
                 handleShow();
             }
             

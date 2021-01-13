@@ -30,6 +30,7 @@ function FormModal({title,description,district,location,date,show,handleClose,se
             <textarea className="event__input" rows="6" value={description} onChange={(e)=>{setDescription(e.target.value)}} placeholder="Describe the activity and requirements.."/>
             <p className="event__lab">District</p>
             <select className="event__input" name="district" id="district2" value={district} onChange={(e)=>setDistrict(e.target.value)} required>
+                        <option value="">Select your district</option>
                         <option value="Alappuzha">Alappuzha</option>
                         <option value="Ernakulam">Ernakulam</option>
                         <option value="Idukki">Idukki</option>

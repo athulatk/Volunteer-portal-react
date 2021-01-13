@@ -14,7 +14,7 @@ function Login(props) {
 
     const Loginaction = (e) =>{
         e.preventDefault();
-        axios.post("http://localhost:3001/auth/Login",{
+        axios.post("http://localhost:3001/auth/Login",{   //
           email:email,
           password:password,
         }).then((res) => {
@@ -32,6 +32,8 @@ function Login(props) {
         }).catch(error =>{
             console.log(error)
         })
+
+        //Fetch Profile on login and put name into global state
     }
 
     return (

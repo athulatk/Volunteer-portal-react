@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import FormModal from './FormModal'
 import Postorg from './Postorg'
 import './EventForm.css'
 import AddBoxIcon from '@material-ui/icons/AddBox';
+import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid';
-function Postvieworg() {
+function Postvieworg({type}) {
 
     const[title,setTitle]=useState("");
     const[description,setDescription]=useState("");
-    const[district,setDistrict]=useState("Alappuzha");
+    const[district,setDistrict]=useState("");
     const[location,setLocation]=useState("");
     const[date,setDate]=useState("");
 
@@ -19,7 +20,13 @@ function Postvieworg() {
     const handleShow = () => setShow(true);
 
     
-
+    useEffect(() => {
+        axios.get("http://localhost:3001/auth/Signup",{
+            type:type
+        })
+        .then(response=>{setEvents(response.data)})
+        
+    }, [])
 
     return (
         <div className="postview">

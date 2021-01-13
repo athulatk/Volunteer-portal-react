@@ -8,17 +8,17 @@ function Categoriesorg() {
         {
             name:"Disaster Management Support",
             image:"/images/dis.jpg",
-            link:"/disasterorg"
+            link:"/org/disaster"
         },
         {
             name:"Technical Support",
             image:"/images/ts.jpg",
-            link:"/disasterorg"
+            link:"/org/technicalsupport"
         },
         {
             name:"Food Supply",
             image:"/images/food.webp",
-            link:"/disasterorg"
+            link:"/org/food"
         }]
     let category_row2=[
         {
@@ -29,12 +29,12 @@ function Categoriesorg() {
         {
             name:"Tutoring",
             image:"/images/tut.jpg",
-            link:"/disasterorg"
+            link:"/org/tutoring"
         },
         {
             name:"Pain and Palliative",
             image:"/images/pain.jpg",
-            link:"/disasterorg"
+            link:"/org/pain"
         }
     ]
 
