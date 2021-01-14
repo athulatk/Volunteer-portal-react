@@ -27,11 +27,11 @@ function App() {
       <Switch>
           <Route exact path="/" component={Welcome}/>
           <Route path="/signup" component={Signup}/>
-          <Route path="/home" component={Home}/>
-          <Route path="/homeorg" component={HomeOrg}/>
-          <Route path="/disaster" component={Disaster}/>
-          <Route exact path="/org/:type" component={Disasterorg}/>
-          <Route path="/org/:type/:eventid" component={VolunteerView}/>
+          <Route exact path="/home" component={Home}/>
+          <Route exact path="/homeorg" component={HomeOrg}/>
+          <Route path="/home/:category" component={Disaster}/>
+          <Route exact path="/homeorg/:type" component={Disasterorg}/>
+          <Route path="/homeorg/:type/:eventid" component={VolunteerView}/>
           <Route path="/blood" component={Blood}/>
           <Route path="/bloodorg" component={BloodOrg}/>
           <Route exact path="/profile" component={Profile}/>

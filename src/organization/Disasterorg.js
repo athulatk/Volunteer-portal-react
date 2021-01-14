@@ -6,6 +6,7 @@ import Postvieworg from './components/Postvieworg'
 import {Row,Col,Container} from 'react-bootstrap'
 
 function Disasterorg({match}){
+    console.log(match)
     return (
         <div>
             <Navbar4/>
@@ -16,7 +17,7 @@ function Disasterorg({match}){
             <Urgentsorg type={match.params.type}/>
             </Col>
             <Col lg={9} style={{padding:'0'}}>
-            <Postvieworg type={match.params.type}/>
+            <Postvieworg type={match.params.type} url={match.url}/>
             </Col>
             </Row>
             </Container>

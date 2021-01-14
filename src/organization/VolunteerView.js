@@ -1,7 +1,7 @@
 import React from 'react'
 import VolunteerCard from './components/VolunteerCard'
 import Navbar2 from '../components/Navbar2'
-import Navbar4 from '../components/Navbar3'
+import Navbar4 from '../components/Navbar4'
 function VolunteerView({match}) {
     console.log(match);
     return (
@@ -22,5 +22,4 @@ function VolunteerView({match}) {
         </div>
     )
 }
-
 export default VolunteerView

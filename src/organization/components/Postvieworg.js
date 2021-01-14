@@ -5,7 +5,7 @@ import './EventForm.css'
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid';
-function Postvieworg({type}) {
+function Postvieworg({type,url}) {
 
     const[title,setTitle]=useState("");
     const[description,setDescription]=useState("");
@@ -51,7 +51,7 @@ function Postvieworg({type}) {
                     return(
                         <Postorg key={event1.id} event1={event1} title={event1.title} description={event1.description} 
                         district={event1.district} location={event1.location}
-                        date={event1.date} events={events} setEvents={setEvents}/>
+                        date={event1.date} events={events} setEvents={setEvents} type={type} url={url}/>
                     )
                 })
             }

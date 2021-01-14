@@ -7,7 +7,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 //Give id
 
-const Postorg = ({title,description,district,location,date,events,setEvents,event1}) => {
+const Postorg = ({title,description,district,location,date,events,setEvents,event1,type,url}) => {
 
     const [modalShow, setModalShow] = useState(false);
 
@@ -45,7 +45,7 @@ const Postorg = ({title,description,district,location,date,events,setEvents,even
             </Card.Text>
                 <div className="card_footer">
                     <button className="delete_button" onClick={deleteModal}><DeleteIcon style={{fontSize:'large',marginBottom:'4.5px'}}/> Delete Event</button>
-                    <Link to={`/disasterorg/${title}`}><button className="view_button">View Enrolled Volunteers</button></Link>
+                    <Link to={`${url}/${title}`}><button className="view_button">View Enrolled Volunteers</button></Link>
                 </div>
             </Card.Body>
         </Card>

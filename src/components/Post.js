@@ -18,17 +18,18 @@ const Post = () =>{
     return(
         <>
             <Card style={{ 
-            maxWidth: '60%', 
-            minHeight:'20rem', 
-            borderRadius:"15px",
-            marginBottom:'2em',
-            boxShadow:"5px 5px gray"}}>
+            maxWidth:"50rem",
+            borderRadius: "15px",
+            marginBottom: '2em',
+            boxShadow: "5px 5px gray",
+            marginLeft:'auto',
+            marginRight:'auto'}}>
 
             <Card.Body>
             <Card.Title style={{color:"#981041"}}>Lorem ipsum</Card.Title>
             <Card.Text>
             <br/>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate, turpis nec dictum viverra, neque urna rutrum lacus, vitae faucibus urna dolor ac risus. Mauris at blandit sem. In hac habitasse platea dictumst. Morbi eu cursus massa. Proin vehicula consequat ultrices. Nullam consectetur efficitur lacus sed commodo. Vivamus felis dolor, sodales vel nunc sit amet, accumsan luctus odio. 
+           
             </Card.Text>
             <Card.Text>
             Rotary Club Kannur
