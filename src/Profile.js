@@ -1,10 +1,25 @@
-import React from 'react'
+import React,{useState,useEffect, useContext} from 'react'
 import Navbar2 from './components/Navbar2'
 import Navbar3 from './components/Navbar3'
 import './Profile.css'
+import axios from 'axios'
 import Activitycard from './components/Activitycard'
 import {Link} from 'react-router-dom'
+import { LoginContext } from './LoginContext'
 function Profile() {
+
+    const[loginstatus]=useContext(LoginContext)
+
+    useEffect(() => {
+        axios.get(`http://localhost:4000/up/profile/${loginstatus.userEmail}`
+        ).then((res)=>{
+            console.log(res);
+        })
+        
+    }, [])
+
+
+
     return (
         <div>
             <Navbar3/>

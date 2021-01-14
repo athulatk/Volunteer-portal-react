@@ -12,7 +12,10 @@ function Postview({type}) {
 
     useEffect(() => {
         axios.get(`http://localhost:4000/user/posts/${type}`)
-        .then(response=>console.log(response))
+        .then((res)=>{
+            console.log(res);
+            setPosts(res.data);
+        })
     }, [])
 
     return (
@@ -30,7 +33,7 @@ function Postview({type}) {
         {
             posts.map(post=>{
                 return(
-                    <Post/>
+                    <Post key={post.id} title={post.title} description={post.description} district={post.district} location={post.location} name={post.name} />
                 )
             })
         }

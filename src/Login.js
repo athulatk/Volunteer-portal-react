@@ -14,14 +14,15 @@ function Login(props) {
 
     const Loginaction = (e) =>{
         e.preventDefault();
-        axios.post("http://localhost:4000/auth/Login",{ 
-          email:email,
-          password:password,
-        }).then((res) => {
+        axios({method:"POST",
+        data:{
+            email:email,password:password,},withCredentials:true,
+            url:"http://localhost:4000/auth/Login"})
+        .then((res) => {
             console.log(res);
-            if(res.data.logged){
-                setLoginstatus({userEmail:email,logged:true})
-                if(res.data.result[0].DESIGNATION==="organization")
+            if(res.data.success){
+                setLoginstatus({userEmail:email,logged:true,name:res.data.user.name})
+                if(res.data.user.role==="ngo")
                     history.push("/homeorg")
                 else
                     history.push("/home")
@@ -34,12 +35,12 @@ function Login(props) {
             console.log(error)
         })
 
-        //Fetch Profile on login and put name into global state
+       
     }
 
     return (
        <>
-        <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
+        <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered animation={false}>
         <Modal.Header closeButton>
         <ModalTitle className="form_lab">Log In</ModalTitle>
         </Modal.Header>

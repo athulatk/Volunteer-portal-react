@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {useState,useEffect} from 'react'
 import './Components.css'
 import axios from 'axios'
 import SearchIcon from '@material-ui/icons/Search';
 import UrgentNeed from './UrgentNeed'
+import { LoginContext } from '../LoginContext';
 function Urgentneeds() {
 
     const[uneeds,setUneeds]=useState([]);
+    const[loginstatus]=useContext(LoginContext)
+    console.log(loginstatus.email)
 
     useEffect(() => {
-        axios.get("http://localhost:4000/user/uneeds")
-        .then(response=>console.log(response))
+        axios.get("http://localhost:4000/user/uneeds",{
+            email:loginstatus.email
+        })
+        .then(response=>{
+            console.log(response.data)
+            setUneeds(response.data)
+        })
+        
         
     }, [])
 
@@ -25,11 +34,10 @@ function Urgentneeds() {
         </div>
         <div className="urgent_cards">
         
-        <UrgentNeed/>
         {
             uneeds.map(uneed=>{
                 return(
-                    <UrgentNeed/>
+                    <UrgentNeed description={uneed.description} phone={uneed.ph} key={uneed.id}/>
                 )
             })
         }

@@ -1,11 +1,18 @@
 import React,{useContext} from 'react'
 import './Nav.css'
+import axios from 'axios'
 import HomeIcon from '@material-ui/icons/Home';
 import {Link} from 'react-router-dom'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import {LoginContext} from '../LoginContext'
 function Navbar3() {
     const[loginstatus,setLoginstatus]=useContext(LoginContext)
+
+    const logoutfun = () =>{
+        axios.get('http://localhost:4000/auth/Logout')
+        .then(response=>console.log(response))
+        setLoginstatus({userEmail:"",logged:false})
+    }
     return (
         <div>
             <nav className="nav">
@@ -24,11 +31,11 @@ function Navbar3() {
                     <div className="navicon dropdown dropbtn">
                     <AccountCircleIcon style={{fontSize:40}}/>
                     <br/>
-                    {loginstatus.userEmail}Steve
+                    {loginstatus.userEmail}
                     {/*<a href="#" className="dropbtn"></a>*/}
                     <div className="dropdown-content">
                     <Link to="/profile" style={{textDecoration:"none"}}>Profile</Link>
-                    <Link to ="/" style={{textDecoration:"none"}} onClick={()=>setLoginstatus({userEmail:"",logged:false})}>Sign Out</Link>
+                    <Link to ="/" style={{textDecoration:"none"}} onClick={logoutfun}>Sign Out</Link>
                     </div>
                     </div>
                 </div>

@@ -1,9 +1,10 @@
-import React,{useState} from 'react'
+import React,{useContext, useState,useEffect} from 'react'
 import '../../components/Components.css'
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import Urgentorg from './Urgentorg'
 import UrgentForm from './UrgentForm'
-import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
+import { LoginContext } from '../../LoginContext';
 function Urgentsorg() {
     const [urgentneeds,setUrgentneeds]=useState([])
     const [description,setDescription]=useState("");
@@ -13,12 +14,21 @@ function Urgentsorg() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const[loginstatus]=useContext(LoginContext)
 
+    useEffect(() => {
+        axios.get('http://localhost:4000/ngo/ug/urgent',{
+            name:loginstatus.name
+        }).then(response=>{
+            console.log(response.data)
+            setUrgentneeds(response.data)})
+    }, [])
+    
     return (
         <div className="urgent_board">
             <h2 className="urgent_heading">Urgent Needs</h2>
             <button className="addurgent mb-5 ml-auto mr-auto" onClick={handleShow}><AddBoxIcon style={{marginBottom:'4.5px'}}/> Post</button>
-            <UrgentForm uuidv4={uuidv4} urgentneeds={urgentneeds}
+            <UrgentForm urgentneeds={urgentneeds}
             setUrgentneeds={setUrgentneeds} description={description} setDescription={setDescription} 
             phone={phone} setPhone={setPhone} show={show} handleClose={handleClose}/>
 

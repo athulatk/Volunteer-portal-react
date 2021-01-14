@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Modal} from 'react-bootstrap'
+import axios from 'axios'
+import { LoginContext } from '../../LoginContext'
 function UrgentForm({show,handleClose,description,setDescription,phone,setPhone,uuidv4,urgentneeds,setUrgentneeds}) {
+
+    const[loginstatus]=useContext(LoginContext)
 
 
     const eventSubmit = (e) => {
         e.preventDefault();
-        setUrgentneeds([{description,phone,id:uuidv4()},...urgentneeds]);
+        axios.post('http://localhost:4000/ngo/uneeds',{
+            name:loginstatus.name,
+            desc:description,
+            ph:phone
+        }).then(setUrgentneeds([{description,phone},...urgentneeds]))
+        
         setDescription("");
         setPhone("");
         
@@ -13,7 +22,7 @@ function UrgentForm({show,handleClose,description,setDescription,phone,setPhone,
 
     
     return (
-            <Modal show={show} onHide={handleClose} animation={true}
+            <Modal show={show} onHide={handleClose} animation={false}
                 size="lg"
                 aria-labelledby="contained-modal-title-vcenter"
                 centered>
@@ -32,7 +41,6 @@ function UrgentForm({show,handleClose,description,setDescription,phone,setPhone,
             </div>
             </form>
             </Modal.Body>
-            
             </Modal>
 
     )

@@ -22,7 +22,7 @@ function Signup() {
   
     const handleClose = () => {
         setShow(false);
-        history.push("/profile/update")
+        history.push("/")
     }
     const handleShow = () => setShow(true);
 
@@ -64,7 +64,7 @@ function Signup() {
             <input onChange={(e)=>{setName(e.target.value)}} className="form2__input" type="text" name="name" value={name} required/>
             <p className="form2__lab">Choose role:</p>
             <input onChange={(e)=>{setDesignation(e.target.value)}} type="radio" name="designation" value="student" required/> <label className="radio_1">Student/Volunteer</label><br/>
-            <input onChange={(e)=>{setDesignation(e.target.value)}} type="radio" name="designation" value="organization"/> <label className="radio_1">Organization</label><br/>
+            <input onChange={(e)=>{setDesignation(e.target.value)}} type="radio" name="designation" value="ngo"/> <label className="radio_1">Organization</label><br/>
             <p className="form2__lab">Email </p>
             <input onChange={(e)=>{setEmail(e.target.value)}} className="form2__input" type="email" name="email" value={email} required/>
             <p className="form2__lab">Password </p>

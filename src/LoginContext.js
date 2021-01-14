@@ -8,7 +8,8 @@ export const LoginProvider =  props =>{
 
     const[loginstatus,setLoginstatus] = useState({
         userEmail:"",
-        logged:false
+        logged:false,
+        name:""
     })
 
     useEffect(() => {

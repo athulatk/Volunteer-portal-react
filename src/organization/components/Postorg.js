@@ -12,8 +12,7 @@ const Postorg = ({title,description,district,location,date,events,setEvents,even
     const [modalShow, setModalShow] = useState(false);
 
     const deleteModal = () =>{
-        setModalShow(true)
-        
+        setModalShow(true)   
     }
 
     const deleteEvent = () =>{

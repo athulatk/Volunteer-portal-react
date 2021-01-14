@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import axios from 'axios'
 import {Modal} from 'react-bootstrap'
+import { LoginContext } from '../../LoginContext'
 
 function FormModal({title,description,district,location,date,show,handleClose,setTitle,setDescription,
-    events,setEvents,setDistrict,setLocation,setDate,uuidv4}) {
+    events,setEvents,setDistrict,setLocation,setDate,uuidv4,type}) {
+
+    const[loginstatus]=useContext(LoginContext);
+
     const eventSubmit = (e) => {
         e.preventDefault();
-        setEvents([{title,description,district,location,date,id:uuidv4()},...events]);
+        axios.post(`http://localhost:4000/ngo/${type}`,{
+            name:loginstatus.name,
+            title:title,
+            desc:description,
+            dist:district,
+            loc:location,
+            date:date
+        }).then(()=>{
+            alert("insert successfull")
+        })
+
+        setEvents([{title,description,district,location,date},...events]);
         setTitle("");
         setDescription("");
         setDistrict("");
@@ -15,7 +31,7 @@ function FormModal({title,description,district,location,date,show,handleClose,se
     }
 
     return (
-        <Modal show={show} onHide={handleClose} animation={true}
+        <Modal show={show} onHide={handleClose} animation={false}
                 size="lg"
                 aria-labelledby="contained-modal-title-vcenter"
                 centered>

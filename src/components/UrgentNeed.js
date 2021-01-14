@@ -1,7 +1,7 @@
 import React from 'react'
 import {Card} from 'react-bootstrap'
 import CallIcon from '@material-ui/icons/Call';
-function UrgentNeed() {
+function UrgentNeed({description,phone}) {
     return (
         <div>
             <Card 
@@ -14,10 +14,10 @@ function UrgentNeed() {
             boxShadow:"black"}}>
 
         <Card.Body>
-        Important requirement at lorem ipsum dolor set amet alkfjlkajfa flskdjf alkfdj l aldkfj lakjlkjlkjlkjlkadf lkaf alkdfjlakfjlaf  lkjfdlkajfl af lajfsldkjflajf
+        {description}
         <br/>
         <br/>
-        <a href="tel:8606894094" style={{textDecoration:'none',color:'black'}}><CallIcon/> 8606894094</a>
+        <a href="tel:8606894094" style={{textDecoration:'none',color:'black'}}><CallIcon/>{phone}</a>
         </Card.Body>
 
         </Card>

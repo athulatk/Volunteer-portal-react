@@ -1,12 +1,14 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect,useContext } from 'react'
 import FormModal from './FormModal'
 import Postorg from './Postorg'
 import './EventForm.css'
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid';
+import { LoginContext } from '../../LoginContext';
 function Postvieworg({type,url}) {
 
+    const[loginstatus]=useContext(LoginContext)
     const[title,setTitle]=useState("");
     const[description,setDescription]=useState("");
     const[district,setDistrict]=useState("");
@@ -19,13 +21,13 @@ function Postvieworg({type,url}) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    
-    useEffect(() => {
-        axios.get(`http://localhost:4000/user/posts/${type}`)
-        .then(response=>console.log(response))
-        
-    }, [])
 
+    useEffect(() => {
+        
+        axios.get(`http://localhost:4000/ngo/${type}`,{
+            name:loginstatus.name,
+        }).then((res)=>console.log(res))
+    }, [])
     return (
         <div className="postview">
             <div className="search__div">
@@ -42,7 +44,7 @@ function Postvieworg({type,url}) {
             <FormModal uuidv4={uuidv4} title={title} description={description} district={district} location={location} date={date} 
             setTitle={setTitle} setDescription={setDescription} setDistrict={setDistrict} setLocation={setLocation} setDate={setDate}
             events={events} setEvents={setEvents}
-            show={show} handleClose={handleClose}/>
+            show={show} handleClose={handleClose} type={type}/>
             <ul>
             {
                 events.map(event1=>{

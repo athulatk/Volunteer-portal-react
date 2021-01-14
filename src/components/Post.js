@@ -6,7 +6,7 @@ import ConfirmModal from './ConfirmModal'
 
 
 
-const Post = () =>{
+const Post = ({title,description,district,location,name}) =>{
 
     const[enrolled,setEnrolled]=useState(false);
     const [modalShow, setModalShow] = useState(false);
@@ -26,16 +26,16 @@ const Post = () =>{
             marginRight:'auto'}}>
 
             <Card.Body>
-            <Card.Title style={{color:"#981041"}}>Lorem ipsum</Card.Title>
+            <Card.Title style={{color:"#981041"}}>{title}</Card.Title>
             <Card.Text>
             <br/>
-           
+            {description}
             </Card.Text>
             <Card.Text>
-            Rotary Club Kannur
+            {name}
             </Card.Text>
             <Card.Text>
-            Location: Kannur
+            Location: {location},{district}
             </Card.Text>
             <Card.Text>
             22/02/2020
@@ -50,7 +50,7 @@ const Post = () =>{
             onHide={() => setModalShow(false)}
             enroll={()=>setEnrolled(true)}
             heading="Confirmation"
-            text={`You will be enrolled to the activity activityname. Do you want to continue??`}
+            text={`You will be enrolled to the activity ${title}. Do you want to continue??`}
             />
             </>
     )
