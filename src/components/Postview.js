@@ -3,7 +3,7 @@ import './Components.css'
 import axios from 'axios'
 import Post from './Post'
 
-function Postview() {
+function Postview({type}) {
 
     const[keyword,setKeyword]=useState('');
     const[location,setLocation]=useState('');
@@ -11,8 +11,8 @@ function Postview() {
     const[posts,setPosts]=useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3001/uneeds')
-        .then(response=>setPosts(response.data))
+        axios.get(`http://localhost:4000/user/posts/${type}`)
+        .then(response=>console.log(response))
     }, [])
 
     return (

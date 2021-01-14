@@ -14,10 +14,11 @@ function Login(props) {
 
     const Loginaction = (e) =>{
         e.preventDefault();
-        axios.post("http://localhost:3001/auth/Login",{   //
+        axios.post("http://localhost:4000/auth/Login",{ 
           email:email,
           password:password,
         }).then((res) => {
+            console.log(res);
             if(res.data.logged){
                 setLoginstatus({userEmail:email,logged:true})
                 if(res.data.result[0].DESIGNATION==="organization")

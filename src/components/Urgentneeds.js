@@ -9,8 +9,8 @@ function Urgentneeds() {
     const[uneeds,setUneeds]=useState([]);
 
     useEffect(() => {
-        axios.get('link')
-        .then(response=>setUneeds(response.data))
+        axios.get("http://localhost:4000/user/uneeds")
+        .then(response=>console.log(response))
         
     }, [])
 

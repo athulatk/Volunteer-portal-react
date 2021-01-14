@@ -21,10 +21,8 @@ function Postvieworg({type,url}) {
 
     
     useEffect(() => {
-        axios.get("http://localhost:3001/auth/Signup",{
-            type:type
-        })
-        .then(response=>{setEvents(response.data)})
+        axios.get(`http://localhost:4000/user/posts/${type}`)
+        .then(response=>console.log(response))
         
     }, [])
 

@@ -31,24 +31,25 @@ function Signup() {
 
     function onSubmit(e){
         e.preventDefault();
-        axios.post("http://localhost:3001/auth/Signup",{
+        axios.post("http://localhost:4000/auth/Signup",{
           name:name,
           email:email,
-          designation:designation,
+          role:designation,
           password:password,
           confirm:confirm
         }).then((res) => {
-            if(res.data.message){
-                setStatus(res.data.message);
+            console.log(res);
+            if(res.data.success){
+              setStatus("Success")
+              handleShow();
             }
             else{
-                setStatus("Success")
+               setStatus("Signup Failed")
                 //set name email logged to login context
-                handleShow();
             }
             
-        }).catch(error =>{
-            console.log(error)
+        }).catch(err =>{
+            console.log(err)
         })
      
     }

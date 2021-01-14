@@ -5,7 +5,7 @@ import Urgentneeds from './components/Urgentneeds'
 import Postview from './components/Postview'
 import {Row,Col,Container} from 'react-bootstrap'
 
-function Disaster() {
+function Disaster({match}) {
     return (
         <div>
             <Navbar3/>
@@ -16,7 +16,7 @@ function Disaster() {
             <Urgentneeds/>
             </Col>
             <Col lg={9} style={{padding:'0'}}>
-            <Postview/>
+            <Postview type={match.params.category}/>
             </Col>
             </Row>
             </Container>

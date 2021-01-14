@@ -2,6 +2,7 @@ import React from 'react'
 import {Container,Row,Col} from 'react-bootstrap'
 import {Card} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
+import { v4 as uuidv4 } from 'uuid';
 function Categoriesorg() {
 
     let category_row1=[
@@ -43,8 +44,8 @@ function Categoriesorg() {
         <Container className="grid">
         <Row className="row">
         {category_row1.map(category => (
-            <Col className="grid__element">
-            <Card className="card-sp" style={{ width: '20rem', height:'18rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216",borderRadius:"30px"}}>
+            <Col className="grid__element" key={uuidv4()}>
+            <Card className="card-sp" style={{ width: '20rem', height:'18rem' ,margin:"5% 5% 5% 5%",backgroundColor:"#F58216",borderRadius:"30px"}} key={uuidv4()}>
             <Link to={category.link} style={{textDecoration:"none"}}>
             <Card.Img style={{borderRadius:"30px 30px 0px 0px"}}height="200px" variant="top" src={category.image} />
             <Card.Body>
@@ -58,8 +59,8 @@ function Categoriesorg() {
 
         <Row className="row">
         {category_row2.map(category => (
-            <Col className="grid__element">
-            <Card className="card-sp" style={{ width: '20rem' ,height:'18rem',margin:"5% 5% 5% 5%",backgroundColor:"#F58216",borderRadius:"30px"}}>
+            <Col className="grid__element" key={uuidv4()}>
+            <Card className="card-sp" style={{ width: '20rem' ,height:'18rem',margin:"5% 5% 5% 5%",backgroundColor:"#F58216",borderRadius:"30px"}} key={uuidv4()}>
             <Link to={category.link} style={{textDecoration:"none"}}>
             <Card.Img style={{borderRadius:"30px 30px 0px 0px"}}height="200px" variant="top" src={category.image} />
             <Card.Body>
