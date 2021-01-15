@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import {Modal} from 'react-bootstrap'
 import axios from 'axios'
 import { LoginContext } from '../../LoginContext'
-function UrgentForm({show,handleClose,description,setDescription,phone,setPhone,uuidv4,urgentneeds,setUrgentneeds}) {
+function UrgentForm({show,handleClose,description,setDescription,ph,setPh,uuidv4,urgentneeds,setUrgentneeds}) {
 
     const[loginstatus]=useContext(LoginContext)
 
@@ -12,12 +12,12 @@ function UrgentForm({show,handleClose,description,setDescription,phone,setPhone,
         axios.post('http://localhost:4000/ngo/uneeds',{
             name:loginstatus.name,
             desc:description,
-            ph:phone
+            ph:ph
         })
-        setUrgentneeds([{description,phone},...urgentneeds])
+        setUrgentneeds([{description,ph},...urgentneeds])
         
         setDescription("");
-        setPhone("");
+        setPh("");
         
     }
 
@@ -36,7 +36,7 @@ function UrgentForm({show,handleClose,description,setDescription,phone,setPhone,
             <textarea className="event__input" placeholder="Provide a description" rows="6" value={description} onChange={(e)=>{setDescription(e.target.value)}} required/>
            
             <p className="event__lab">Phone Number </p>
-            <input className="event__input" type="tel" name="phone" pattern="[0-9]{10}"  placeholder="Enter contact number" value={phone} onChange={(e)=>{setPhone(e.target.value)}}required/>
+            <input className="event__input" type="tel" name="phone" pattern="[0-9]{10}"  placeholder="Enter contact number" value={ph} onChange={(e)=>{setPh(e.target.value)}}required/>
             <div className="event__btn">
             <button className="yes" type="submit">Submit</button>
             </div>

@@ -11,7 +11,7 @@ const renderTooltip = (props) => (
     </Tooltip>
 )
 
-function Urgentorg({description,phone,id,urgentneeds,setUrgentneeds,urgent}) {
+function Urgentorg({description,ph,id,urgentneeds,setUrgentneeds,urgent}) {
 
     
 
@@ -36,7 +36,7 @@ function Urgentorg({description,phone,id,urgentneeds,setUrgentneeds,urgent}) {
         {description}
         <br/>
         <br/>
-            <a href={`tel:${phone}`} style={{textDecoration:'none',color:'black'}}><CallIcon/> {phone}</a>
+            <a href={`tel:${ph}`} style={{textDecoration:'none',color:'black'}}><CallIcon/> {ph}</a>
             <OverlayTrigger
             placement="bottom"
             delay={{ show: 250, hide: 400 }}

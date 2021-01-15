@@ -3,6 +3,7 @@ import Navbar3 from './components/Navbar3'
 import Navbar2 from './components/Navbar2'
 import {Row,Col,Container} from 'react-bootstrap'
 import './Blood.css'
+import axios from 'axios'
 
 function Blood() {
 
@@ -13,12 +14,32 @@ function Blood() {
     const[district,setDistrict]=useState("");
     const[phone,setPhone]=useState("");
     const[confirm,setConfirm]=useState("");
+
+    const bloodSubmit = (e) =>{
+        e.preventDefault();
+        axios.post('http://localhost:4000/user/enroll/blood',{
+            name:name,
+            bg:bloodgrp,
+            dob:dob,
+            sex:sex,
+            dist:district,
+            ph:phone
+        }).then(
+            res=>{
+                console.log(res)
+            }
+        )
+        console.log(dob)
+        
+    }
+
+
     return (
         <div>
             <Navbar3/>
             <Navbar2/>
             <h2 className="text-center blood_head">Blood Donation Form</h2>
-            <form className="blood__form">
+            <form className="blood__form" onSubmit={bloodSubmit}>
                 <Container>
                     <Row>
                         <Col lg={2} ><p className="form2__lab">Name</p></Col>

@@ -43,13 +43,13 @@ function Urgentsorg() {
             <button className="addurgent mb-5 ml-auto mr-auto" onClick={handleShow}><AddBoxIcon style={{marginBottom:'4.5px'}}/> Post</button>
             <UrgentForm urgentneeds={urgentneeds}
             setUrgentneeds={setUrgentneeds} description={description} setDescription={setDescription} 
-            ph={ph} setPhone={setPh} show={show} handleClose={handleClose}/>
+            ph={ph} setPh={setPh} show={show} handleClose={handleClose}/>
 
         <div className="urgent_cards">
         <ul>
         {
             urgentneeds.map(urgent=>(
-                <Urgentorg key={urgent.id} id={urgent.id} description={urgent.description} phone={urgent.ph} urgent={urgent} urgentneeds={urgentneeds}
+                <Urgentorg key={urgent.id} id={urgent.id} description={urgent.description} ph={urgent.ph} urgent={urgent} urgentneeds={urgentneeds}
                 setUrgentneeds={setUrgentneeds}/>
             ))
         }

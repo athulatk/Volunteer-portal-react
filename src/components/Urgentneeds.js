@@ -9,26 +9,43 @@ function Urgentneeds() {
 
     const[uneeds,setUneeds]=useState([]);
     const[loginstatus]=useContext(LoginContext)
-    console.log(loginstatus.email)
+    console.log(loginstatus.userEmail)
+    const[query,setQuery]=useState('');
 
     useEffect(() => {
-        axios.get("http://localhost:4000/user/uneeds",{
-            email:loginstatus.email
+        if(loginstatus.userEmail){
+            axios.get("http://localhost:4000/user/uneeds",{
+            params:{
+                email:loginstatus.userEmail
+            }
         })
         .then(response=>{
             console.log(response.data)
             setUneeds(response.data)
         })
+
+        }
+        
         
         
     }, [])
+
+    const searchUrgent = (e) =>{
+        e.preventDefault();
+        axios.get('http://localhost:4000/user/uneedsearch',{
+            params:{
+                term:query
+            }
+        }).then(res=>console.log(res))
+
+    }
 
     return (
         <div className="urgent_board">
             <h2 className="urgent_heading">Urgent Needs</h2>
         <div className="text-center">
-        <form>
-        <input type="text" placeholder="Search urgent needs.."className="urgent_searchbar"/>
+        <form onSubmit={searchUrgent}>
+        <input type="text" value={query} placeholder="Search urgent needs.."className="urgent_searchbar" onChange={(e)=>{setQuery(e.target.value)}}/>
         <button type="submit" className="search_button2"><SearchIcon/></button>
         </form>
         </div>
@@ -37,7 +54,7 @@ function Urgentneeds() {
         {
             uneeds.map(uneed=>{
                 return(
-                    <UrgentNeed description={uneed.description} phone={uneed.ph} key={uneed.id}/>
+                    <UrgentNeed id={uneed.id} description={uneed.description} phone={uneed.ph} key={uneed.id}/>
                 )
             })
         }

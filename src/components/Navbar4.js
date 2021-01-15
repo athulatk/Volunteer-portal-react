@@ -8,7 +8,7 @@ import {LoginContext} from '../LoginContext'
 function Navbar4() {
     const[loginstatus,setLoginstatus]=useContext(LoginContext)
     const logoutfun = () =>{
-        axios.delete('http://localhost:4000/auth/Logout')
+        axios.get('http://localhost:4000/auth/Logout')
         .then(response=>console.log(response))
         setLoginstatus({userEmail:"",logged:false})
     }
