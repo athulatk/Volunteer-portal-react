@@ -29,11 +29,10 @@ function Postview({type}) {
         </div>
 
         <div className="posts" style={{marginTop:'7%'}}>
-        <Post/>
         {
             posts.map(post=>{
                 return(
-                    <Post key={post.id} title={post.title} description={post.description} district={post.district} location={post.location} name={post.name} />
+                    <Post key={post.id} id={post.id} title={post.title} description={post.description} district={post.district} location={post.location} name={post.name} type={type}/>
                 )
             })
         }

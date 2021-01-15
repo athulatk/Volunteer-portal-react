@@ -3,7 +3,7 @@ import {Modal} from 'react-bootstrap'
 function ConfirmModal(props) {
     return (
     
-            <Modal show={props.show} onHide={props.onHide} animation={true} size="md"
+            <Modal show={props.show} onHide={props.onHide} animation={false} size="md"
               aria-labelledby="contained-modal-title-vcenter"
               centered
             >

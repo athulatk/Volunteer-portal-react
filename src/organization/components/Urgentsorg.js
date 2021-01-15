@@ -8,7 +8,7 @@ import { LoginContext } from '../../LoginContext';
 function Urgentsorg() {
     const [urgentneeds,setUrgentneeds]=useState([])
     const [description,setDescription]=useState("");
-    const [phone,setPhone]=useState("");
+    const [ph,setPh]=useState("");
 
     const [show, setShow] = useState(false);
 
@@ -16,13 +16,26 @@ function Urgentsorg() {
     const handleShow = () => setShow(true);
     const[loginstatus]=useContext(LoginContext)
 
+
     useEffect(() => {
-        axios.get('http://localhost:4000/ngo/ug/urgent',{
-            name:loginstatus.name
-        }).then(response=>{
-            console.log(response.data)
-            setUrgentneeds(response.data)})
-    }, [])
+        if(loginstatus?.name){
+            axios.get('http://localhost:4000/ngo/ug/urgent',{
+            params:{
+                name:loginstatus.name
+            },
+            withCredentials:true
+        })
+        .then(response=>{
+            console.log(response)
+            setUrgentneeds(response.data)
+        })
+        }
+        
+        
+        
+    }, [loginstatus])
+
+   
     
     return (
         <div className="urgent_board">
@@ -30,13 +43,13 @@ function Urgentsorg() {
             <button className="addurgent mb-5 ml-auto mr-auto" onClick={handleShow}><AddBoxIcon style={{marginBottom:'4.5px'}}/> Post</button>
             <UrgentForm urgentneeds={urgentneeds}
             setUrgentneeds={setUrgentneeds} description={description} setDescription={setDescription} 
-            phone={phone} setPhone={setPhone} show={show} handleClose={handleClose}/>
+            ph={ph} setPhone={setPh} show={show} handleClose={handleClose}/>
 
         <div className="urgent_cards">
         <ul>
         {
             urgentneeds.map(urgent=>(
-                <Urgentorg key={urgent.id} description={urgent.description} phone={urgent.phone} urgent={urgent} urgentneeds={urgentneeds}
+                <Urgentorg key={urgent.id} description={urgent.description} phone={urgent.ph} urgent={urgent} urgentneeds={urgentneeds}
                 setUrgentneeds={setUrgentneeds}/>
             ))
         }

@@ -13,7 +13,8 @@ function UrgentForm({show,handleClose,description,setDescription,phone,setPhone,
             name:loginstatus.name,
             desc:description,
             ph:phone
-        }).then(setUrgentneeds([{description,phone},...urgentneeds]))
+        })
+        setUrgentneeds([{description,phone},...urgentneeds])
         
         setDescription("");
         setPhone("");

@@ -4,7 +4,7 @@ import {Modal} from 'react-bootstrap'
 import { LoginContext } from '../../LoginContext'
 
 function FormModal({title,description,district,location,date,show,handleClose,setTitle,setDescription,
-    events,setEvents,setDistrict,setLocation,setDate,uuidv4,type}) {
+    events,setEvents,setDistrict,setLocation,setDate,type}) {
 
     const[loginstatus]=useContext(LoginContext);
 

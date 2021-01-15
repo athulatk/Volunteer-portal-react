@@ -7,9 +7,9 @@ export const LoginContext=createContext();
 export const LoginProvider =  props =>{
 
     const[loginstatus,setLoginstatus] = useState({
-        userEmail:"",
+        userEmail:'',
         logged:false,
-        name:""
+        name:''
     })
 
     useEffect(() => {

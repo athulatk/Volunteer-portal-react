@@ -1,12 +1,15 @@
 import React from 'react'
+import axios from 'axios'
 import Navbar4 from '../components/Navbar4'
 import Navbar2 from '../components/Navbar2'
 import Urgentsorg from './components/Urgentsorg'
 import Postvieworg from './components/Postvieworg'
 import {Row,Col,Container} from 'react-bootstrap'
 
+
 function Disasterorg({match}){
     console.log(match)
+  
     return (
         <div>
             <Navbar4/>

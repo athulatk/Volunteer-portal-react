@@ -1,18 +1,29 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 import './Components.css'
+import axios from 'axios'
 import {Card} from 'react-bootstrap';
 import ConfirmModal from './ConfirmModal'
+import {LoginContext} from '../LoginContext'
 
 
 
+const Post = ({title,description,district,location,name,id,type}) =>{
 
-const Post = ({title,description,district,location,name}) =>{
-
+    const[loginstatus]=useContext(LoginContext)
+    
     const[enrolled,setEnrolled]=useState(false);
     const [modalShow, setModalShow] = useState(false);
 
     const handleClick = () =>{
         setModalShow(true);
+    }
+
+    const enrollaction = () =>{
+        axios.post(`http://localhost:4000/user/enrolled/${title}/${name}/${id}`,{
+            email:loginstatus.userEmail,
+            type:type
+        }).then(res=>console.log(res))
+        setEnrolled(true)
     }
 
     return(
@@ -48,7 +59,7 @@ const Post = ({title,description,district,location,name}) =>{
             <ConfirmModal
             show={modalShow}
             onHide={() => setModalShow(false)}
-            enroll={()=>setEnrolled(true)}
+            enroll={()=>{enrollaction()}}
             heading="Confirmation"
             text={`You will be enrolled to the activity ${title}. Do you want to continue??`}
             />

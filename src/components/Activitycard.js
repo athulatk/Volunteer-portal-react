@@ -4,7 +4,7 @@ import CertificateModal from './CertificateModal'
 
 
 
-function Activitycard() {
+function Activitycard({title,org,status}) {
 
     const [modalShow, setModalShow] = useState(false);
 
@@ -14,10 +14,10 @@ function Activitycard() {
     return (
         <div className="activity">
             <div className="activity__details">
-                <p>H20 Volunteer</p>
-                <p>Kannur</p>
+                <p>{title}</p>
+                <p>{org}</p>
             </div>
-            <p className="status">Ongoing</p>
+            <p className="status">{status?"Approved":"Pending"}</p>
             <button className="claim_btn" onClick={showModal}>
                 Claim Certificate
             </button>

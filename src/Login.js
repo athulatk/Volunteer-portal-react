@@ -7,9 +7,9 @@ import {LoginContext} from './LoginContext'
 function Login(props) {
 
     const[loginstatus,setLoginstatus]=useContext(LoginContext)
-    const[email,setEmail]=useState("");
-    const[password,setPassword]=useState(""); 
-    const[msg,setMsg]=useState("");
+    const[email,setEmail]=useState('');
+    const[password,setPassword]=useState(''); 
+    const[msg,setMsg]=useState('');
     let history=useHistory();
 
     const Loginaction = (e) =>{

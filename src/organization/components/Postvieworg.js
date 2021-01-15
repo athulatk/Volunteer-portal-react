@@ -20,14 +20,20 @@ function Postvieworg({type,url}) {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-
+    
     useEffect(() => {
-        
-        axios.get(`http://localhost:4000/ngo/${type}`,{
-            name:loginstatus.name,
-        }).then((res)=>console.log(res))
-    }, [])
+        if(loginstatus?.name)
+            axios.get(`http://localhost:4000/ngo/${type}`,{
+                params:{
+                name:loginstatus.name
+            },
+            withCredentials:true
+            }).then((res)=>{
+                console.log(res)
+                setEvents(res.data)
+            })
+    }, [loginstatus])
+
     return (
         <div className="postview">
             <div className="search__div">
@@ -41,7 +47,7 @@ function Postvieworg({type,url}) {
             
             <div className="posts">
             <button className="yes mb-5 ml-auto mr-auto" onClick={handleShow}><AddBoxIcon style={{marginBottom:'4.5px'}}/> Add Event</button>
-            <FormModal uuidv4={uuidv4} title={title} description={description} district={district} location={location} date={date} 
+            <FormModal title={title} description={description} district={district} location={location} date={date} 
             setTitle={setTitle} setDescription={setDescription} setDistrict={setDistrict} setLocation={setLocation} setDate={setDate}
             events={events} setEvents={setEvents}
             show={show} handleClose={handleClose} type={type}/>
@@ -49,7 +55,7 @@ function Postvieworg({type,url}) {
             {
                 events.map(event1=>{
                     return(
-                        <Postorg key={event1.id} event1={event1} title={event1.title} description={event1.description} 
+                        <Postorg key={event1.id} id={event1.id} event1={event1} title={event1.title} description={event1.description} 
                         district={event1.district} location={event1.location}
                         date={event1.date} events={events} setEvents={setEvents} type={type} url={url}/>
                     )
