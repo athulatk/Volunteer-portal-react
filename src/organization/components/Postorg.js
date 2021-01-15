@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Card} from 'react-bootstrap';
 import './Postorg.css'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 import ConfirmModal2 from './ConfirmModal2'
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -16,6 +17,8 @@ const Postorg = ({title,description,district,location,date,events,setEvents,even
     }
 
     const deleteEvent = () =>{
+        axios.delete(`http://localhost:4000/ngo/${type}/${id}`)
+        .then(res=>console.log(res))
         setEvents(events.filter(el=>el.id!==event1.id))
     }
 

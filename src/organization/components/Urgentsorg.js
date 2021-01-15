@@ -49,7 +49,7 @@ function Urgentsorg() {
         <ul>
         {
             urgentneeds.map(urgent=>(
-                <Urgentorg key={urgent.id} description={urgent.description} phone={urgent.ph} urgent={urgent} urgentneeds={urgentneeds}
+                <Urgentorg key={urgent.id} id={urgent.id} description={urgent.description} phone={urgent.ph} urgent={urgent} urgentneeds={urgentneeds}
                 setUrgentneeds={setUrgentneeds}/>
             ))
         }

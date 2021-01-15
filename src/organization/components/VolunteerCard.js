@@ -1,7 +1,18 @@
-import React from 'react'
+import axios from 'axios'
+import React,{useState} from 'react'
 import { Card } from 'react-bootstrap'
 import './VolunteerCard.css'
-function VolunteerCard({fname,dob,email,phone,district}) {
+function VolunteerCard({fname,dob,email,phone,district,id}) {
+
+
+    const[confirmed,setConfirmed]=useState(false)
+
+    const confirmVolunteer = () =>{
+        axios.put(`http://localhost:4000/ngo/enrolled/${email}/${id}`)
+        .then(res=>console.log(res))
+        setConfirmed(true);
+    }
+
     return (
             <Card style={{
             maxWidth:"50rem",
@@ -33,7 +44,8 @@ function VolunteerCard({fname,dob,email,phone,district}) {
             </div> 
             </Card.Text>
             <div style={{width:'100%'}}>
-                    <button className="yes" style={{display:'block',marginLeft:'auto'}}>Confirm</button>
+                    <button className="yes" style={{display:confirmed?'none':'block',marginLeft:'auto'}} onClick={confirmVolunteer}>Confirm</button>
+                    <p style={{color:'green',fontSize:'larger',fontWeight:'bolder',position:'absolute',bottom:'5px',right:'50px',display:confirmed?"block":"none"}}>Confirmed</p>
             </div>
             </Card.Body>
         </Card>

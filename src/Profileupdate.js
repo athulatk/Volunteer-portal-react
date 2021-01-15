@@ -45,7 +45,7 @@ function Profileupdate() {
         console.log(institution)
 
         axios.post('http://localhost:4000/up/update',{
-            dob:dob,
+            dob:dob.slice(0,10),
             institute:institution,
             district:district,
             ph:phone,
@@ -57,6 +57,8 @@ function Profileupdate() {
                 alert("Profile Update Successful")
         
         })
+        console.log(dob.slice(0,10))
+        console.log(district)
 
     }
 
@@ -94,6 +96,7 @@ function Profileupdate() {
                             <Col lg={2}><p className="form2__lab">District</p></Col>
                             <Col lg={10}>
                                 <select className="update__input" name="district" id="district" value={district} onChange={(e) => { setDistrict(e.target.value) }}>
+                                    <option value="">Select your district</option>
                                     <option value="Alappuzha">Alappuzha</option>
                                     <option value="Ernakulam">Ernakulam</option>
                                     <option value="Idukki">Idukki</option>

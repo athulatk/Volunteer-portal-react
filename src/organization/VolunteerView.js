@@ -34,13 +34,12 @@ function VolunteerView({match}) {
         <h4 className="main_head">Applied Volunteers List</h4>
         <div className="application_status">
         <h5>Total Volunteers Applied: {volunteers.length}</h5>
-        <h6>Confirmed Volunteers:2</h6>
         </div>
         <div className="volunteers">
         {
             volunteers.map(volunteer=>{
                 return(
-                    <VolunteerCard fname={volunteer.name} email={volunteer.email} dob={volunteer.dob} phone={volunteer.ph} district={volunteer.district}/>
+                    <VolunteerCard fname={volunteer.name} email={volunteer.email} dob={volunteer.dob} phone={volunteer.ph} district={volunteer.district} id={volunteer.id}/>
                 )
             })
         }
