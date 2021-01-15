@@ -13,6 +13,7 @@ function VolunteerCard({fname,dob,email,phone,district,id}) {
         setConfirmed(true);
     }
 
+
     return (
             <Card style={{
             maxWidth:"50rem",
@@ -28,7 +29,7 @@ function VolunteerCard({fname,dob,email,phone,district,id}) {
             <Card.Text className="enrolled_details">
             <div>
             <p className="enrolled_label">DOB</p>
-            <p className="enrolled_value">{dob}</p>
+            <p className="enrolled_value">1999-04-21</p>
             </div>
             <div>
             <p className="enrolled_label">Email</p>

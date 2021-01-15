@@ -7,7 +7,7 @@ import {LoginContext} from '../LoginContext'
 
 
 
-const Post = ({title,description,district,location,name,id,type}) =>{
+const Post = ({title,description,district,location,name,id,type,date}) =>{
 
     const[loginstatus]=useContext(LoginContext)
     
@@ -49,7 +49,7 @@ const Post = ({title,description,district,location,name,id,type}) =>{
             Location: {location},{district}
             </Card.Text>
             <Card.Text>
-            22/02/2020
+            {date}
             </Card.Text>
             <button className="enroll" style={{display:enrolled?"none":"block"}} onClick={handleClick}>Enroll</button>
             <p style={{color:"green",marginLeft:'85%',display:enrolled?"block":"none",fontSize:"larger",paddingLeft:"0.8em",fontWeight:"bolder"

@@ -30,6 +30,7 @@ function Blood() {
             }
         )
         console.log(dob)
+        alert("Form Submitted")
         
     }
 
@@ -49,6 +50,7 @@ function Blood() {
                         <Col lg={2}><p className="form2__lab">Blood Group</p></Col>
                         <Col lg={10}> 
                         <select name="blood__group" className="blood__input" id="blood_grp" value={bloodgrp} onChange={(e)=>setBloodgrp(e.target.value)}>
+                        <option value="">Select blood group</option>
                         <option value="A+">A+</option>
                         <option value="A-">A-</option> 
                         <option value="B+">B+</option> 
@@ -66,6 +68,7 @@ function Blood() {
                     <Row>
                     <Col lg={2}><p className="form2__lab">Sex</p></Col>
                         <Col lg={10}><select className="blood__input" name="district" id="district" value={sex} onChange={(e)=>{setSex(e.target.value)}}>
+                        <option value="">Select</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Others">Others</option>

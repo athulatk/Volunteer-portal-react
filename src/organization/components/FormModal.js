@@ -16,7 +16,7 @@ function FormModal({title,description,district,location,date,show,handleClose,se
             desc:description,
             dist:district,
             loc:location,
-            date:date
+            dat:date
         }).then(()=>{
             alert("insert successfull")
         })
@@ -58,7 +58,7 @@ function FormModal({title,description,district,location,date,show,handleClose,se
                         <option value="Malappuram">Malappuram</option>
                         <option value="Palakkad">Palakkad</option>
                         <option value="Pathanamthitta">Pathanamthitta</option>
-                        <option value="Thiruvanthapuram">Thiruvananthapuram</option>
+                        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
                         <option value="Thrissur">Thrissur</option>
                         <option value="Wayanad">Wayanad</option>
                         </select>
