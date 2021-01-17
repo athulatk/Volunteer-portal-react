@@ -49,7 +49,7 @@ const Post = ({title,description,district,location,name,id,type,date}) =>{
             Location: {location},{district}
             </Card.Text>
             <Card.Text>
-            {date}
+            {date?.slice(0,10)}
             </Card.Text>
             <button className="enroll" style={{display:enrolled?"none":"block"}} onClick={handleClick}>Enroll</button>
             <p style={{color:"green",marginLeft:'85%',display:enrolled?"block":"none",fontSize:"larger",paddingLeft:"0.8em",fontWeight:"bolder"

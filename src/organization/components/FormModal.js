@@ -16,7 +16,7 @@ function FormModal({title,description,district,location,date,show,handleClose,se
             desc:description,
             dist:district,
             loc:location,
-            dat:date
+            dat:date.slice(0,10)
         }).then(()=>{
             alert("insert successfull")
         })

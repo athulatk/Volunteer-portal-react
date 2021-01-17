@@ -36,13 +36,13 @@ function Postvieworg({type,url}) {
 
     return (
         <div className="postview">
-            <div className="search__div">
+            {/*<div className="search__div">
                 <form className="search__form">
                     <input className="search__input" type="text" placeholder="Keyword" />
                     <input className="search__input" type="text" placeholder="Location" />
                     <button className="search__button" type="submit">Search</button>
                 </form>
-            </div>
+            </div>*/}
 
             
             <div className="posts">

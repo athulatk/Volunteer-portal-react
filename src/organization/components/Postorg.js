@@ -43,7 +43,7 @@ const Postorg = ({title,description,district,location,date,events,setEvents,even
                     Location: {location}, {district}
             </Card.Text>
                 <Card.Text>
-                
+            {date?.slice(0,10)}
             </Card.Text>
                 <div className="card_footer">
                     <button className="delete_button" onClick={deleteModal}><DeleteIcon style={{fontSize:'large',marginBottom:'4.5px'}}/> Delete Event</button>

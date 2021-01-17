@@ -38,7 +38,7 @@ function Signup() {
           password:password,
           confirm:confirm
         }).then((res) => {
-            console.log(res);
+            
             if(res.data.success){
               setStatus("Success")
               handleShow();
@@ -78,10 +78,10 @@ function Signup() {
             </form>
             <br/>
             <h5 style={{textAlign:"center",color:"red"}}>{status}</h5>
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
             </Modal.Header>
-            <Modal.Body><img src="/images/tick.png" alt="check" height="100px" width="100px" style={{marginLeft:"40%"}}/><p style={{textAlign:"center",color:"green"}}>Registration Successful<br/>Complete your Profile before enrolling into volunteering activities</p></Modal.Body>
+            <Modal.Body><img src="/images/tick.png" alt="check" height="100px" width="100px" style={{marginLeft:"40%"}}/><p style={{textAlign:"center",color:"green"}}>Registration Successful<br/>Login to continue..</p></Modal.Body>
             </Modal>
             </>
     )

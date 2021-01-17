@@ -29,7 +29,7 @@ function VolunteerCard({fname,dob,email,phone,district,id}) {
             <Card.Text className="enrolled_details">
             <div>
             <p className="enrolled_label">DOB</p>
-            <p className="enrolled_value">1999-04-21</p>
+            <p className="enrolled_value">{dob?.slice(0,10)}</p>
             </div>
             <div>
             <p className="enrolled_label">Email</p>
